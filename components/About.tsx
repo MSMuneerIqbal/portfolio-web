@@ -63,8 +63,8 @@ export default function About() {
 
           <motion.div variants={itemVariants} className="mb-12">
             <p className="text-lg leading-relaxed mb-6">
-              Hello! I'm Muhammad MUNEER IQBAL, a passionate AI Developer with
-               over 1 years of experience in creating robust and
+              Hello! I'm MUNEER IQBAL, a passionate AI Developer with
+               over 1+ years of experience in creating robust and
               scalable Ai applications. My journey in the world of programming
               started when I was in University, and since then, I've been
               constantly learning and evolving with the ever-changing landscape

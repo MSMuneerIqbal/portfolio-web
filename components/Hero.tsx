@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const roles = ["Full Stack Developer", "Frontend Developer", "Backend Developer" , "UI/UX Designer"]
+const roles = ["AI Developer", "Generative AI","Agentic Ai", "Machine Learning Engineer" , "Data Analysis"]
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-primary">Fahad Jabbar</span>
+              Hi, I'm <span className="text-primary">Muneer Iqbal</span>
             </h1>
             <div className="h-12 mb-6">
               <span className="text-2xl md:text-3xl font-semibold">
@@ -59,7 +59,7 @@ export default function Hero() {
               </span>
             </div>
             <p className="text-muted-foreground text-lg mb-8">
-            Building scalable and seamless web solutions with expertise in frontend and backend development
+            Building scalable and efficient AI solutions with expertise in Machine Learning and Generative AI
             </p>
             <div className="flex gap-4">
               <Button size="lg" onClick={scrollToProjects}>View My Work</Button>
