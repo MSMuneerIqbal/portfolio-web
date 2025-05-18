@@ -80,7 +80,7 @@ export default function Resume() {
               A detailed overview of my professional journey and educational background.
             </p>
             <Button asChild className="inline-flex items-center gap-2">
-              <Link href="https://drive.google.com/file/d/1XFLvO236IpYDWq5vs5CFSn7igErRfCSy/view?usp=drive_link" target="_blank">
+              <Link href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=sharing" target="_blank">
               Check Out My CV
               </Link>
             </Button>
