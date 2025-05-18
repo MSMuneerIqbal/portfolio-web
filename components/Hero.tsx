@@ -63,7 +63,7 @@ export default function Hero() {
             </p>
             <div className="flex gap-4">
               <Button size="lg" onClick={scrollToProjects}>View My Work</Button>
-              <Link href="https://drive.google.com/file/d/1XFLvO236IpYDWq5vs5CFSn7igErRfCSy/view?usp=drive_link" target="_blank">
+              <Link href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=drive_link" target="_blank">
               <Button size="lg" variant="outline">Check Out My CV</Button>
               </Link>
             </div>
