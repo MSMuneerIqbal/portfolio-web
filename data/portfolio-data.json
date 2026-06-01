@@ -1,0 +1,520 @@
+{
+  "profile": {
+    "name": "Muneer Iqbal",
+    "title": "Full-Stack AI/ML & Agentic AI Developer | GenAI Engineer",
+    "bio": "Passionate full-stack developer specializing in Agentic AI, Generative AI, Machine Learning, and modern web development. Experienced in building scalable applications with AI integration.",
+    "location": "Pakistan",
+    "email": "muneeriqbal@example.com",
+    "github": "https://github.com/MSMuneerIqbal",
+    "portfolio": "https://muneer-iqbal.vercel.app"
+  },
+  "skills": {
+    "AI & Machine Learning": [
+      "LLMs & Generative AI",
+      "CrewAI",
+      "LangChain",
+      "RAG Systems",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Computer Vision (CV)",
+      "Time Series Analysis",
+      "Sentiment Analysis"
+    ],
+    "Backend Development": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "RESTful APIs",
+      "MCP Servers"
+    ],
+    "Frontend Development": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "JavaScript",
+      "HTML/CSS",
+      "Tailwind CSS",
+      "Responsive Design"
+    ],
+    "AI Frameworks & Tools": [
+      "OpenAI SDK",
+      "Anthropic Claude",
+      "Google Gemini",
+      "Streamlit",
+      "Chainlit",
+      "n8n",
+      "Pinecone",
+      "Groq",
+      "HuggingFace"
+    ],
+    "Data Science": [
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Jupyter Notebooks",
+      "Data Visualization",
+      "Statistical Analysis"
+    ],
+    "DevOps & Cloud": [
+      "Docker & Containers",
+      "Git & GitHub",
+      "CI/CD Pipelines",
+      "AWS",
+      "Supabase",
+      "Vercel"
+    ]
+  },
+  "projectCategories": {
+    "Agentic AI Systems": {
+      "icon": "🤖",
+      "description": "Autonomous AI agents for complex task automation",
+      "projects": [
+        {
+          "name": "agentic-ai-mvp-v0",
+          "description": "MVP for Agentic AI platform with multi-agent orchestration",
+          "tech": ["Python", "CrewAI", "LLMs"],
+          "status": "Private",
+          "type": "Featured"
+        },
+        {
+          "name": "qyra",
+          "description": "Agentic AI MVP - Research and automation platform",
+          "tech": ["Python", "FastAPI", "LLMs"],
+          "status": "Private",
+          "type": "Featured"
+        },
+        {
+          "name": "Weather-Agent-with-Chainlit-OpenAI-Agent-SDK",
+          "description": "Weather forecasting agent using OpenAI SDK and Chainlit UI",
+          "tech": ["Python", "OpenAI SDK", "Chainlit"],
+          "url": "https://github.com/MSMuneerIqbal/Weather-Agent-with-Chainlit-OpenAI-Agent-SDK"
+        },
+        {
+          "name": "Market_Trends_Analyst_Agent",
+          "description": "AI agent for market trend analysis and forecasting",
+          "tech": ["Python", "CrewAI", "Data Analysis"],
+          "url": "https://github.com/MSMuneerIqbal/Market_Trends_Analyst_Agent"
+        },
+        {
+          "name": "upwork-proposal-agent",
+          "description": "Intelligent agent for generating Upwork proposals",
+          "tech": ["Python", "LLMs", "Automation"],
+          "status": "Private"
+        },
+        {
+          "name": "Hospital-Ai-Assistant",
+          "description": "Healthcare AI assistant for hospital operations",
+          "tech": ["Python", "LLMs", "Healthcare AI"],
+          "status": "Private"
+        }
+      ]
+    },
+    "Generative AI & RAG": {
+      "icon": "📚",
+      "description": "RAG systems and document understanding with LLMs",
+      "projects": [
+        {
+          "name": "Document-QueryAssistant-groundx-gemini-streamlit",
+          "description": "Query assistant for documents using Gemini and Streamlit",
+          "tech": ["Python", "Gemini", "Streamlit", "RAG"],
+          "url": "https://github.com/MSMuneerIqbal/Document-QueryAssistant-groundx-gemini-streamlit"
+        },
+        {
+          "name": "Document-Ingestion-Agent",
+          "description": "Intelligent document ingestion and processing system",
+          "tech": ["Python", "LLMs", "Document Processing"],
+          "status": "Private"
+        },
+        {
+          "name": "chat-with-your-documents",
+          "description": "Interactive chat interface for document analysis",
+          "tech": ["Python", "LangChain", "LLMs"],
+          "url": "https://github.com/MSMuneerIqbal/chat-with-your-documents"
+        },
+        {
+          "name": "Rag-streamlit-groq-Embed-localhf",
+          "description": "RAG system using Groq LLMs and local embeddings",
+          "tech": ["Python", "Streamlit", "Groq", "RAG"],
+          "url": "https://github.com/MSMuneerIqbal/Rag-streamlit-groq-Embed-localhf"
+        },
+        {
+          "name": "MultiSearch-Tool-RAG-WEB",
+          "description": "Multi-source search with RAG for web information retrieval",
+          "tech": ["Python", "RAG", "Web Search"],
+          "url": "https://github.com/MSMuneerIqbal/MultiSearch-Tool-RAG-WEB"
+        },
+        {
+          "name": "Islamic-Inheritance-pdf-report-generator-MCP-Server",
+          "description": "PDF report generator for Islamic inheritance calculations",
+          "tech": ["Python", "MCP", "PDF Generation"],
+          "url": "https://github.com/MSMuneerIqbal/Islamic-Inheritance-pdf-report-generator-MCP-Server"
+        }
+      ]
+    },
+    "Machine Learning & Data Science": {
+      "icon": "📊",
+      "description": "ML/DL models, data analysis, and predictive systems",
+      "projects": [
+        {
+          "name": "streamlit_heart_disease-classification-project",
+          "description": "Heart disease prediction using ML classification models",
+          "tech": ["Python", "Streamlit", "Scikit-learn", "ML"],
+          "url": "https://github.com/MSMuneerIqbal/streamlit_heart_disease-classification-project"
+        },
+        {
+          "name": "Machine-Learning-Practice",
+          "description": "Comprehensive ML project collection with hands-on examples",
+          "tech": ["Python", "Scikit-learn", "Jupyter"],
+          "url": "https://github.com/MSMuneerIqbal/Machine-Learning-Practice"
+        },
+        {
+          "name": "Image-Restoration-DL_Autoencoders",
+          "description": "Deep learning image restoration using autoencoders",
+          "tech": ["Python", "TensorFlow", "Deep Learning"],
+          "url": "https://github.com/MSMuneerIqbal/Image-Restoration-DL_Autoencoders"
+        },
+        {
+          "name": "Donation_prediction_Bot",
+          "description": "ML bot for predicting donation amounts",
+          "tech": ["Python", "ML", "Prediction"],
+          "url": "https://github.com/MSMuneerIqbal/Donation_prediction_Bot"
+        },
+        {
+          "name": "donation_prediction_time_series_analysis",
+          "description": "Time series analysis for donation trends",
+          "tech": ["Python", "Time Series", "Analysis"],
+          "url": "https://github.com/MSMuneerIqbal/donation_prediction_time_series_analysis"
+        },
+        {
+          "name": "Sentiments-Analysis-NoteBooks-Daraz-productData",
+          "description": "Sentiment analysis on e-commerce product reviews",
+          "tech": ["Python", "NLP", "Sentiment Analysis"],
+          "url": "https://github.com/MSMuneerIqbal/Sentiments-Analysis-NoteBooks-Daraz-productData"
+        },
+        {
+          "name": "Ai-Based-English-Learning-Bot-GenAi-Hackathon-prject",
+          "description": "English learning bot with AI feedback (GenAI Hackathon)",
+          "tech": ["Python", "NLP", "GenAI", "Education"],
+          "url": "https://github.com/MSMuneerIqbal/Ai-Based-English-Learning-Bot-GenAi-Hackathon-prject",
+          "type": "Featured"
+        },
+        {
+          "name": "HandTracked-CV-AI-SnakeGame",
+          "description": "Computer vision game with hand tracking",
+          "tech": ["Python", "OpenCV", "AI"],
+          "url": "https://github.com/MSMuneerIqbal/HandTracked-CV-AI-SnakeGame"
+        },
+        {
+          "name": "Multilingual_Translator_Project-main",
+          "description": "Multilingual translation system using AI",
+          "tech": ["Python", "NLP", "Translation"],
+          "url": "https://github.com/MSMuneerIqbal/Multilingual_Translator_Project-main"
+        }
+      ]
+    },
+    "Web Applications": {
+      "icon": "🌐",
+      "description": "Full-stack web apps with modern frameworks",
+      "projects": [
+        {
+          "name": "portfolio-web",
+          "description": "Professional portfolio website showcasing projects and skills",
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+          "url": "https://github.com/MSMuneerIqbal/portfolio-web",
+          "liveUrl": "https://muneer-iqbal.vercel.app"
+        },
+        {
+          "name": "kashibaba.pk",
+          "description": "E-commerce platform for product listing and sales",
+          "tech": ["Next.js", "TypeScript", "Database"],
+          "url": "https://github.com/MSMuneerIqbal/kashibaba.pk"
+        },
+        {
+          "name": "ginox-defi-dashboard-main",
+          "description": "DeFi dashboard for cryptocurrency tracking",
+          "tech": ["TypeScript", "React", "Finance"],
+          "url": "https://github.com/MSMuneerIqbal/ginox-defi-dashboard-main"
+        },
+        {
+          "name": "Agentic-AI-Tutor",
+          "description": "AI-powered tutoring platform with adaptive learning",
+          "tech": ["TypeScript", "Next.js", "LLMs"],
+          "status": "Private"
+        },
+        {
+          "name": "obs-agenticai-assistant-frontend-backend",
+          "description": "Full-stack agentic AI assistant application",
+          "tech": ["TypeScript", "React", "Python", "FastAPI"],
+          "status": "Private"
+        }
+      ]
+    },
+    "Business Applications": {
+      "icon": "💼",
+      "description": "Enterprise solutions for inventory and operations",
+      "projects": [
+        {
+          "name": "7star-computer-shop-pos",
+          "description": "Point of Sale (POS) system for computer shop",
+          "tech": ["TypeScript", "Database", "Business Logic"],
+          "status": "Private"
+        },
+        {
+          "name": "7star-shop-inventory",
+          "description": "Inventory management system for retail operations",
+          "tech": ["Python", "Database", "Management"],
+          "url": "https://github.com/MSMuneerIqbal/7star-shop-inventory"
+        },
+        {
+          "name": "7star-Shop-multan-update",
+          "description": "Updated shop management system",
+          "tech": ["Python", "Database"],
+          "status": "Private"
+        },
+        {
+          "name": "7starwarehouse-raw-stock-app",
+          "description": "Warehouse stock management application",
+          "tech": ["Python", "Inventory", "Database"],
+          "status": "Private"
+        },
+        {
+          "name": "sevenstar_warehouse_ReadyStock_app",
+          "description": "Warehouse ready stock tracking system",
+          "tech": ["Python", "Stock Management"],
+          "status": "Private"
+        },
+        {
+          "name": "optifyserve-frontend-backend",
+          "description": "SaaS product for business optimization",
+          "tech": ["TypeScript", "Next.js", "Python", "FastAPI"],
+          "status": "Private",
+          "type": "Featured"
+        },
+        {
+          "name": "Inventry-management-Bookshop",
+          "description": "Inventory system for bookshop management",
+          "tech": ["HTML", "CSS", "Database"],
+          "url": "https://github.com/MSMuneerIqbal/Inventry-management-Bookshop"
+        }
+      ]
+    },
+    "Chatbots & Conversational AI": {
+      "icon": "💬",
+      "description": "Interactive chatbots and conversational interfaces",
+      "projects": [
+        {
+          "name": "chainlit-litellm-bot",
+          "description": "Chatbot using Chainlit UI and LiteLLM",
+          "tech": ["Python", "Chainlit", "LiteLLM"],
+          "url": "https://github.com/MSMuneerIqbal/chainlit-litellm-bot"
+        },
+        {
+          "name": "chainlit-ui",
+          "description": "Custom Chainlit UI implementations",
+          "tech": ["Python", "Chainlit"],
+          "url": "https://github.com/MSMuneerIqbal/chainlit-ui"
+        },
+        {
+          "name": "websearch-chat-Bot",
+          "description": "Chatbot with web search capability",
+          "tech": ["Python", "LLMs", "Web Search"],
+          "url": "https://github.com/MSMuneerIqbal/websearch-chat-Bot"
+        },
+        {
+          "name": "ApnaBot-HuggingFace-gemeini",
+          "description": "Multi-language chatbot with HuggingFace",
+          "tech": ["Python", "HuggingFace", "NLP"],
+          "status": "Private"
+        }
+      ]
+    },
+    "Learning & Educational": {
+      "icon": "📚",
+      "description": "Educational resources and learning materials",
+      "projects": [
+        {
+          "name": "learn-generative-ai",
+          "description": "Comprehensive GenAI engineering course with multiple LLMs",
+          "tech": ["OpenAI", "Gemini", "LangChain", "Next.js"],
+          "url": "https://github.com/MSMuneerIqbal/learn-generative-ai"
+        },
+        {
+          "name": "learn-modern-python",
+          "description": "Learn Python 3.12+ with Type Hints",
+          "tech": ["Python", "Type Hints", "Modern Python"],
+          "url": "https://github.com/MSMuneerIqbal/learn-modern-python"
+        },
+        {
+          "name": "learn-cloud-native-modern-python",
+          "description": "Cloud-native Python development with containers",
+          "tech": ["Python", "Docker", "Cloud"],
+          "url": "https://github.com/MSMuneerIqbal/learn-cloud-native-modern-python"
+        },
+        {
+          "name": "learn-fine-tuning-llms",
+          "description": "LLM fine-tuning complete guide",
+          "tech": ["Python", "LLMs", "Fine-tuning"],
+          "url": "https://github.com/MSMuneerIqbal/learn-fine-tuning-llms"
+        },
+        {
+          "name": "learn-low-code-agentic-ai",
+          "description": "Low-code agentic AI development with n8n and MCP",
+          "tech": ["n8n", "Supabase", "MCP"],
+          "url": "https://github.com/MSMuneerIqbal/learn-low-code-agentic-ai"
+        },
+        {
+          "name": "learn-applied-generative-ai-fundamentals",
+          "description": "Applied GenAI fundamentals course",
+          "tech": ["GenAI", "LLMs"],
+          "url": "https://github.com/MSMuneerIqbal/learn-applied-generative-ai-fundamentals"
+        },
+        {
+          "name": "PIAIC-Applied-Generative-Ai-Learnings",
+          "description": "PIAIC generative AI training materials",
+          "tech": ["GenAI", "Course"],
+          "url": "https://github.com/MSMuneerIqbal/PIAIC-Applied-Generative-Ai-Learnings"
+        },
+        {
+          "name": "python-langchain",
+          "description": "LangChain framework learning and implementation",
+          "tech": ["Python", "LangChain"],
+          "url": "https://github.com/MSMuneerIqbal/python-langchain"
+        },
+        {
+          "name": "crewai-learnings-Agnets",
+          "description": "CrewAI multi-agent framework learning",
+          "tech": ["Python", "CrewAI", "Agents"],
+          "url": "https://github.com/MSMuneerIqbal/crewai-learnings-Agnets"
+        }
+      ]
+    },
+    "Developer Tools & Utilities": {
+      "icon": "🛠️",
+      "description": "Helpful tools and utilities for developers",
+      "projects": [
+        {
+          "name": "fastapi-learnings",
+          "description": "FastAPI backend development learnings",
+          "tech": ["Python", "FastAPI"],
+          "url": "https://github.com/MSMuneerIqbal/fastapi-learnings"
+        },
+        {
+          "name": "docker-containers-python",
+          "description": "Docker containerization best practices",
+          "tech": ["Python", "Docker"],
+          "url": "https://github.com/MSMuneerIqbal/docker-containers-python"
+        },
+        {
+          "name": "simple-calculator-app",
+          "description": "Simple calculator application",
+          "tech": ["Python"],
+          "url": "https://github.com/MSMuneerIqbal/simple-calculator-app"
+        },
+        {
+          "name": "obs-agent-local-setup-guide",
+          "description": "Local setup guide for OBS agents",
+          "tech": ["Setup", "Configuration"],
+          "url": "https://github.com/MSMuneerIqbal/obs-agent-local-setup-guide"
+        },
+        {
+          "name": "Cli-Agents-Installation-Guide",
+          "description": "CLI agents installation and setup guide",
+          "tech": ["CLI", "Setup"],
+          "url": "https://github.com/MSMuneerIqbal/Cli-Agents-Installation-Guide"
+        },
+        {
+          "name": "CLAUDE-MASTER-GUIDE",
+          "description": "Comprehensive Claude API master guide",
+          "tech": ["Claude", "LLMs"],
+          "url": "https://github.com/MSMuneerIqbal/CLAUDE-MASTER-GUIDE"
+        }
+      ]
+    },
+    "Data Processing & Analysis": {
+      "icon": "📈",
+      "description": "Data handling, processing and visualization",
+      "projects": [
+        {
+          "name": "Handling_csv.xlsx_data_streamlitApp",
+          "description": "Streamlit app for CSV/XLSX data processing",
+          "tech": ["Python", "Streamlit", "Pandas"],
+          "url": "https://github.com/MSMuneerIqbal/Handling_csv.xlsx_data_streamlitApp"
+        },
+        {
+          "name": "All-projects-ML-DL-and-NLP",
+          "description": "Collection of ML, DL, and NLP projects",
+          "tech": ["Python", "ML", "DL", "NLP"],
+          "url": "https://github.com/MSMuneerIqbal/All-projects-ML-DL-and-NLP"
+        },
+        {
+          "name": "Ai-Projects-Using-ML-DL-NLP",
+          "description": "AI projects using machine learning and NLP",
+          "tech": ["Python", "AI", "ML"],
+          "status": "Private"
+        },
+        {
+          "name": "low-code-Agentic-RAG-And-Research-Assistant",
+          "description": "Low-code RAG and research assistant system",
+          "tech": ["Python", "RAG", "Low-code"],
+          "url": "https://github.com/MSMuneerIqbal/low-code-Agentic-RAG-And-Research-Assistant"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "totalProjects": 89,
+    "publicProjects": 58,
+    "privateProjects": 31,
+    "languageDistribution": {
+      "Python": 52,
+      "TypeScript": 15,
+      "JavaScript": 8,
+      "HTML/CSS": 5,
+      "Jupyter Notebook": 9
+    },
+    "mainFocus": "Agentic AI, Generative AI, Full-Stack Development"
+  },
+  "certificates": [
+    {
+      "title": "Generative AI Engineering",
+      "issuer": "Pakistan Institute of Artificial Intelligence & Cloud Computing (PIAIC)",
+      "year": 2024
+    },
+    {
+      "title": "Applied Generative AI Fundamentals",
+      "issuer": "Pak Angels",
+      "year": 2024
+    },
+    {
+      "title": "Cloud Native Modern Python Development",
+      "issuer": "PIAIC",
+      "year": 2024
+    }
+  ],
+  "highlights": {
+    "achievements": [
+      "Built 15+ AI-powered applications using LLMs and agents",
+      "Developed multiple SaaS products for business automation",
+      "Created comprehensive educational resources in GenAI",
+      "Specialized in RAG systems and document intelligence",
+      "Expert in CrewAI, LangChain, and OpenAI SDKs",
+      "Built inventory management systems for retail businesses"
+    ],
+    "technologiesExpertise": [
+      "Agentic AI Systems",
+      "Large Language Models (LLMs)",
+      "Generative AI",
+      "Machine Learning & Deep Learning",
+      "Full-Stack Web Development",
+      "Containerization & DevOps",
+      "Database Design & Optimization"
+    ]
+  }
+}
