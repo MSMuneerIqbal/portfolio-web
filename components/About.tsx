@@ -1,24 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, GraduationCap } from "lucide-react";
+import { Award, Briefcase, GraduationCap, Zap, Code2, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const achievements = [
   {
     icon: Award,
-    title: "2+ Years Experience",
-    description: "In Ai Development",
+    title: "89+ Projects",
+    description: "Full-stack AI & web applications",
+    color: "from-blue-500 to-blue-600"
   },
   {
     icon: Briefcase,
-    title: "20+ Projects",
-    description: "Completed successfully",
+    title: "2+ Years Experience",
+    description: "In AI Development",
+    color: "from-purple-500 to-purple-600"
   },
   {
     icon: GraduationCap,
-    title: "Bachelor Degree",
-    description: "Artificial Intelligence",
+    title: "AI Graduate",
+    description: "Pakistan Institute of AI (PIAIC)",
+    color: "from-green-500 to-green-600"
+  },
+  {
+    icon: Zap,
+    title: "15+ AI Apps",
+    description: "LLMs & Agentic AI Systems",
+    color: "from-yellow-500 to-yellow-600"
+  },
+  {
+    icon: Code2,
+    title: "Full-Stack Dev",
+    description: "Python, TypeScript, Next.js",
+    color: "from-pink-500 to-pink-600"
+  },
+  {
+    icon: Target,
+    title: "9 Skill Categories",
+    description: "AI, ML, DL, Web, DevOps & More",
+    color: "from-orange-500 to-orange-600"
   },
 ];
 
@@ -45,64 +66,90 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-muted/50">
+    <section id="about" className="py-24 bg-gradient-to-b from-background via-muted/30 to-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-muted-foreground">
-            Dedicated AI developer focused on crafting innovative, scalable, and high-performance solutions.
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-purple-500 mx-auto rounded-full"></div>
+            <p className="text-muted-foreground text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+              Generative AI specialist and full-stack developer passionate about building intelligent solutions that bridge research and real-world applications.
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="mb-12">
-            <p className="text-lg leading-relaxed mb-6">
-              Hello! I'm MUNEER IQBAL, a passionate AI Developer with
-               over 1+ years of experience in creating robust and
-              scalable Ai applications. My journey in the world of programming
-              started when I was in University, and since then, I've been
-              constantly learning and evolving with the ever-changing landscape
-              of Ai technologies.
-              My academic journey and hands-on projects have provided me with a strong 
-              foundation in Machine Learning (ML), Deep Learning (DL), Generative AI, and Exploratory Data Analysis (EDA).
-            </p>
-            <p className="text-lg leading-relaxed">
-            "As a graduate in Artificial Intelligence, I am passionate about applied Generative AI, 
-            Retrieval-Augmented Generation (RAG), LangChain, and Agentic AI. I specialize in developing 
-            intelligent solutions that bridge the gap between research and real-world applications."
-            Currently, I am deeply engaged in Generative AI engineering, Retrieval-Augmented Generation (RAG), LangChain, 
-            and Agentic AI, exploring their real-world applications. My recent work focuses on building intelligent, interactive 
-            AI-driven solutions that bridge the gap between research and practical implementation.
-            </p>
+          <motion.div variants={itemVariants} className="mb-16 space-y-6">
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-4">🤖 My Expertise</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                I'm a **Generative AI specialist** with deep expertise in building **Agentic AI systems**, implementing **RAG (Retrieval-Augmented Generation)** pipelines, and developing full-stack applications. My passion lies in creating intelligent, scalable solutions that leverage cutting-edge AI technologies.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                With over 2 years in AI development and a background in Artificial Intelligence, I've successfully delivered 89+ projects across multiple domains including chatbots, machine learning models, enterprise solutions, and educational platforms. I'm constantly exploring new AI research and best practices to stay at the forefront of innovation.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-4">🎯 What I Do</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Agentic AI Systems:</strong> Multi-agent orchestration, autonomous workflows, and intelligent automation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Generative AI:</strong> LLM integration (OpenAI, Claude, Gemini, Groq), RAG systems, and document intelligence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Machine Learning:</strong> Predictive models, deep learning, NLP, and computer vision</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Full-Stack Development:</strong> Modern web apps, APIs, databases, and cloud deployment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Enterprise Solutions:</strong> SaaS platforms, inventory management, and business automation</span>
+                </li>
+              </ul>
+            </div>
           </motion.div>
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {achievements.map((achievement, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex flex-col items-center text-center">
-                      <achievement.icon className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-semibold text-xl mb-2">
-                        {achievement.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {achievement.description}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+            {achievements.map((achievement, index) => {
+              const Icon = achievement.icon;
+              return (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="group h-full hover:shadow-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+                    <div className={`h-1 bg-gradient-to-r ${achievement.color}`}></div>
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className={`p-3 rounded-lg bg-gradient-to-br ${achievement.color} bg-opacity-10 group-hover:scale-110 transition-transform`}>
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg mb-1">
+                            {achievement.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {achievement.description}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>

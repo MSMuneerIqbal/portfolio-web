@@ -6,7 +6,14 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const roles = ["AI Developer", "Generative AI","Agentic Ai", "Machine Learning Engineer" , "Data Analysis"]
+const roles = [
+  "Full-Stack AI/ML Developer",
+  "Generative AI Engineer",
+  "Agentic AI Specialist",
+  "Machine Learning Engineer",
+  "Data Science Expert",
+  "RAG Systems Developer"
+]
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -20,7 +27,7 @@ export default function Hero() {
         if (displayText.length < role.length) {
           setDisplayText(role.slice(0, displayText.length + 1))
         } else {
-          setTimeout(() => setIsDeleting(true), 1500)
+          setTimeout(() => setIsDeleting(true), 2000)
         }
       } else {
         if (displayText.length > 0) {
@@ -49,23 +56,54 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-primary">Muneer Iqbal</span>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mb-4"
+            >
+              <span className="text-primary font-semibold text-lg">👋 Welcome to my portfolio</span>
+            </motion.div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">Muneer Iqbal</span>
             </h1>
-            <div className="h-12 mb-6">
+            <div className="h-14 mb-8 bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-lg p-3 flex items-center">
               <span className="text-2xl md:text-3xl font-semibold">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </span>
             </div>
-            <p className="text-muted-foreground text-lg mb-8">
-            Building scalable and efficient AI solutions with expertise in Machine Learning and Generative AI
+            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
+              Building intelligent, scalable AI solutions with expertise in Generative AI, Agentic AI Systems, Machine Learning, and Full-Stack Development. 
             </p>
-            <div className="flex gap-4">
-              <Button size="lg" onClick={scrollToProjects}>View My Work</Button>
-              <Link href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=drive_link" target="_blank">
-              <Button size="lg" variant="outline">Check Out My CV</Button>
+            <p className="text-muted-foreground text-base mb-8 leading-relaxed">
+              Specializing in RAG systems, LLM integration, and turning cutting-edge AI research into real-world applications.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Button size="lg" onClick={scrollToProjects} className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                View My Work
+              </Button>
+              <Link href="https://github.com/MSMuneerIqbal" target="_blank">
+                <Button size="lg" variant="outline" className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                  GitHub Profile
+                </Button>
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t">
+              <div>
+                <div className="text-3xl font-bold text-primary">89+</div>
+                <div className="text-sm text-muted-foreground">Projects</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">9</div>
+                <div className="text-sm text-muted-foreground">Skill Areas</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">2+</div>
+                <div className="text-sm text-muted-foreground">Years AI Dev</div>
+              </div>
             </div>
           </motion.div>
 
@@ -74,7 +112,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
-            style={{ perspective: "1000px" }}
           >
             <motion.div
               animate={{ 
@@ -87,18 +124,17 @@ export default function Hero() {
               }}
               className="relative z-10"
             >
-              <Image
-                width={500}
-                height={500}
-                src="/image.png"
-                alt="Profile"
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-purple-500/30 rounded-3xl blur-3xl" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/image.png"
+                  alt="Profile"
+                  className="rounded-3xl shadow-2xl w-full max-w-md mx-auto relative z-10 border-2 border-primary/20"
+                />
+              </div>
             </motion.div>
-            <div 
-              className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl"
-              style={{ transform: "translateZ(-50px)" }}
-            />
           </motion.div>
         </div>
       </div>
