@@ -1,134 +1,164 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import { Briefcase, GraduationCap, FileText, ExternalLink } from "lucide-react";
 
-const workExperience = [
+const experience = [
   {
     title: "AI Developer",
     company: "Ai World",
-    period: "2024-Present",
-    description: "Led development of enterprise applications, mentored junior developers, and implemented best practices."
+    period: "2024 – Present",
+    desc: "Led development of enterprise AI applications, mentored junior developers, and implemented best practices across the stack.",
+  },
+  {
+    title: "Applied GenAI Engineer",
+    company: "PIAIC Lahore",
+    period: "2024 – Present",
+    desc: "Advanced training in Applied Generative AI and Agentic AI systems with hands-on industry projects.",
   },
   {
     title: "Network Engineer",
     company: "The Islamia University of Bahawalpur",
-    period: "2023-2024",
-    description: "Got a good knowledge of Networking and Security"
+    period: "2023 – 2024",
+    desc: "Gained comprehensive knowledge of networking infrastructure and cybersecurity fundamentals.",
   },
-  {
-    title: "Applied Generative and Agentic AI Engineer",
-    company: "Learning From PIAIC Lahore",
-    period: "2024-present",
-    description: "Have a good knowledge of Applied Generative and Agentic AI"
-  }
-]
+];
 
 const education = [
-  // {
-  //   degree: "Master's in Computer Science",
-  //   institution: "University of Technology",
-  //   period: "2029-2030",
-  //   description: "Specialized in Software Engineering and Artificial Intelligence"
-  // },
   {
     degree: "BS ADP Artificial Intelligence",
     institution: "The Islamia University of Bahawalpur",
-    period: "2022-2024",
-    description: "In this period I have learned about The Basics of Machine Learning, Deep Learning, and Natural Language Processing"
+    period: "2022 – 2024",
+    desc: "Machine Learning, Deep Learning, and Natural Language Processing foundations.",
   },
-   {
-    degree: "BCS",
+  {
+    degree: "BCS (Computer Science)",
     institution: "Govt. Degree College, Dunyapur",
-    period: "2019-2022",
-    description: "Bachelor 14 year with computer science and Mathematics"
-  }
-]
+    period: "2019 – 2022",
+    desc: "Bachelor's with focus on Computer Science and Mathematics.",
+  },
+];
 
 export default function Resume() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  }
-
   return (
-    <section id="resume" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="resume" className="relative py-24 md:py-32 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/4 rounded-full blur-[120px]" />
+        <div className="dot-pattern absolute inset-0 opacity-30" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          variants={containerVariants}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Resume</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-              A detailed overview of my professional journey and educational background.
-            </p>
-            <Button asChild className="inline-flex items-center gap-2">
-              <Link href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=drive_link" target="_blank">
-              Check Out My CV
-              </Link>
-            </Button>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sm font-medium text-purple-400 mb-6"
+          >
+            <FileText className="h-3.5 w-3.5" />
+            Resume
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Experience &{" "}
+            <span className="gradient-text">Education</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-6">
+            My professional journey and academic background
+          </p>
+          <motion.a
+            href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl glass-card hover:border-purple-500/30 text-sm font-medium transition-all"
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+            View Full CV
+          </motion.a>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Experience */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
+                <Briefcase className="h-5 w-5 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold">Work Experience</h3>
+            </div>
+
+            <div className="space-y-4">
+              {experience.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="glass-card rounded-xl p-5 group"
+                >
+                  <div className="flex justify-between items-start mb-1">
+                    <h4 className="font-semibold">{item.title}</h4>
+                    <span className="text-xs text-muted-foreground flex-shrink-0 ml-2">{item.period}</span>
+                  </div>
+                  <p className="text-sm text-purple-400 mb-2">{item.company}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <motion.div variants={containerVariants}>
-              <h3 className="text-2xl font-semibold mb-6">Work Experience</h3>
-              <div className="space-y-6">
-                {workExperience.map((job, index) => (
-                  <motion.div key={index} variants={itemVariants}>
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="text-lg font-semibold">{job.title}</h4>
-                          <span className="text-sm text-muted-foreground">{job.period}</span>
-                        </div>
-                        <p className="text-primary mb-2">{job.company}</p>
-                        <p className="text-muted-foreground">{job.description}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
+          {/* Education */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                <GraduationCap className="h-5 w-5 text-blue-400" />
               </div>
-            </motion.div>
+              <h3 className="text-xl font-semibold">Education</h3>
+            </div>
 
-            <motion.div variants={containerVariants}>
-              <h3 className="text-2xl font-semibold mb-6">Education</h3>
-              <div className="space-y-6">
-                {education.map((edu, index) => (
-                  <motion.div key={index} variants={itemVariants}>
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="text-lg font-semibold">{edu.degree}</h4>
-                          <span className="text-sm text-muted-foreground">{edu.period}</span>
-                        </div>
-                        <p className="text-primary mb-2">{edu.institution}</p>
-                        <p className="text-muted-foreground">{edu.description}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
+            <div className="space-y-4">
+              {education.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="glass-card rounded-xl p-5 group"
+                >
+                  <div className="flex justify-between items-start mb-1">
+                    <h4 className="font-semibold">{item.degree}</h4>
+                    <span className="text-xs text-muted-foreground flex-shrink-0 ml-2">{item.period}</span>
+                  </div>
+                  <p className="text-sm text-blue-400 mb-2">{item.institution}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
-  )
+  );
 }

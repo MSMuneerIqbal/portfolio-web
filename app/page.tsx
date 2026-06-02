@@ -1,8 +1,11 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import CurrentlyWorking from '@/components/CurrentlyWorking'
+import GitHubStats from '@/components/GitHubStats'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
-import Resume from '@/components/Resume'
+import Achievements from '@/components/Achievements'
+import Certifications from '@/components/Certifications'
 import Contact from '@/components/Contact'
 
 export default function Home() {
@@ -10,9 +13,12 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <About />
+      <CurrentlyWorking />
+      <GitHubStats />
       <Projects />
       <Skills />
-      <Resume />
+      <Achievements />
+      <Certifications />
       <Contact />
     </div>
   )

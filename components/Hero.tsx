@@ -1,335 +1,313 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Github, Linkedin, ArrowDown, Brain } from "lucide-react";
+import Link from "next/link";
 
 const roles = [
-  "🤖 Full-Stack AI/ML Developer",
-  "🧠 Generative AI Engineer",
-  "🔮 Agentic AI Specialist",
-  "⚙️ LLM Integration Expert",
-  "📊 RAG Systems Architect",
-  "🚀 AI Solutions Builder"
-]
+  "AI-Driven Agentic AI Engineer",
+  "Multi-Agent Systems Architect",
+  "Generative AI Engineer",
+  "MCP Server Developer",
+  "RAG Systems Architect",
+  "Full-Stack AI Developer",
+];
 
-const AnimatedBackground = () => {
+function FloatingOrbs() {
   return (
-    <div className="absolute inset-0 overflow-hidden">
-      {/* Animated gradient orbs */}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <motion.div
-        className="absolute w-96 h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{
-          x: [0, 100, -100, 0],
-          y: [0, -100, 100, 0],
+        className="absolute w-[600px] h-[600px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%)",
+          top: "5%",
+          left: "-10%",
         }}
-        transition={{ duration: 15, repeat: Infinity }}
-        style={{ top: '10%', left: '10%' }}
+        animate={{ x: [0, 60, -30, 0], y: [0, -40, 30, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-96 h-96 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{
-          x: [0, -100, 100, 0],
-          y: [0, 100, -100, 0],
+        className="absolute w-[500px] h-[500px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%)",
+          top: "40%",
+          right: "-8%",
         }}
-        transition={{ duration: 18, repeat: Infinity }}
-        style={{ top: '50%', right: '10%' }}
+        animate={{ x: [0, -50, 40, 0], y: [0, 50, -20, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{
-          x: [0, 50, -50, 0],
-          y: [0, -50, 50, 0],
+        className="absolute w-[400px] h-[400px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%)",
+          bottom: "10%",
+          left: "40%",
         }}
-        transition={{ duration: 20, repeat: Infinity }}
-        style={{ bottom: '10%', left: '50%' }}
+        animate={{ x: [0, 30, -50, 0], y: [0, -30, 20, 0] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>
-  )
+  );
 }
 
-const MatrixRain = () => {
-  const characters = '01アイエオウ█▀▄▌▐▓▒░'
-  const columns = 15
-  const [raindrops, setRaindrops] = useState<string[]>([])
-
-  useEffect(() => {
-    const drops = Array(columns).fill(0).map(() => 
-      characters[Math.floor(Math.random() * characters.length)]
-    )
-    setRaindrops(drops)
-  }, [])
-
+function NeuralRing() {
   return (
-    <div className="absolute inset-0 opacity-5 overflow-hidden">
-      <div className="grid" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-        {raindrops.map((char, i) => (
-          <motion.div
-            key={i}
-            className="text-green-500 text-sm font-bold"
-            animate={{ y: [0, 500] }}
-            transition={{ duration: 8 + Math.random() * 4, repeat: Infinity }}
-          >
-            {char}
-          </motion.div>
-        ))}
+    <div className="relative w-72 h-72 md:w-80 md:h-80">
+      {/* Outer ring */}
+      <motion.div
+        className="absolute inset-0 rounded-full border border-purple-500/15"
+        animate={{ rotate: 360, scale: [1, 1.05, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      {/* Middle ring */}
+      <motion.div
+        className="absolute inset-4 rounded-full border border-blue-500/10"
+        animate={{ rotate: -360, scale: [1, 0.95, 1] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+      />
+      {/* Center brain */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <motion.div
+          className="w-28 h-28 rounded-full bg-gradient-to-br from-purple-500/10 to-blue-600/10 border border-purple-500/20 flex items-center justify-center"
+          animate={{ scale: [1, 1.08, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Brain className="h-12 w-12 text-purple-400/80" />
+        </motion.div>
       </div>
+      {/* Orbiting dots */}
+      {[0, 72, 144, 216, 288].map((angle, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-3 h-3 rounded-full bg-purple-400/60 shadow-[0_0_10px_rgba(168,85,247,0.5)]"
+          style={{
+            top: "50%",
+            left: "50%",
+            marginLeft: -6,
+            marginTop: -6,
+          }}
+          animate={{
+            x: Math.cos((angle * Math.PI) / 180) * 130,
+            y: Math.sin((angle * Math.PI) / 180) * 130,
+            opacity: [0.3, 1, 0.3],
+          }}
+          transition={{
+            duration: 3 + i * 0.4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
 export default function Hero() {
-  const [roleIndex, setRoleIndex] = useState(0)
-  const [displayText, setDisplayText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-  
-  useEffect(() => {
-    const role = roles[roleIndex]
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < role.length) {
-          setDisplayText(role.slice(0, displayText.length + 1))
-        } else {
-          setTimeout(() => setIsDeleting(true), 2500)
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1))
-        } else {
-          setIsDeleting(false)
-          setRoleIndex((prev) => (prev + 1) % roles.length)
-        }
-      }
-    }, isDeleting ? 30 : 80)
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
-    return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, roleIndex])
+  useEffect(() => {
+    const role = roles[roleIndex];
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (displayText.length < role.length) {
+            setDisplayText(role.slice(0, displayText.length + 1));
+          } else {
+            setTimeout(() => setIsDeleting(true), 2200);
+          }
+        } else {
+          if (displayText.length > 0) {
+            setDisplayText(displayText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setRoleIndex((prev) => (prev + 1) % roles.length);
+          }
+        }
+      },
+      isDeleting ? 25 : 70
+    );
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, roleIndex]);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section id="home" className="min-h-screen pt-32 px-4 relative overflow-hidden flex items-center">
-      <AnimatedBackground />
-      <MatrixRain />
-      
-      <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+    <section
+      id="home"
+      className="min-h-screen relative overflow-hidden flex items-center"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 dot-pattern opacity-30" />
+      <FloatingOrbs />
+
+      <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left - Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-6"
           >
-            {/* Badge */}
+            {/* Greeting badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-block"
+              transition={{ delay: 0.15 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium"
             >
-              <div className="gradient-border rounded-full px-4 py-2 inline-block">
-                <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                  🌟 Welcome to My AI Portfolio
-                </span>
-              </div>
+              <Sparkles className="h-3.5 w-3.5 text-purple-400" />
+              <span className="text-muted-foreground">Welcome to my portfolio</span>
             </motion.div>
 
-            {/* Main Title */}
+            {/* Name */}
             <div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.25 }}
+                className="text-muted-foreground text-lg mb-2"
+              >
+                Hi, I&apos;m
+              </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-5xl md:text-7xl font-bold leading-tight mb-4"
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none"
               >
-                Hi, I'm{' '}
                 <span className="gradient-text">Muneer Iqbal</span>
               </motion.h1>
-              
-              {/* Animated Role */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="gradient-border rounded-2xl p-6 mt-6 min-h-24 flex items-center"
-              >
-                <div className="text-2xl md:text-3xl font-semibold">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-green-400">
-                    {displayText}
-                  </span>
-                  <motion.span
-                    animate={{ opacity: [1, 0] }}
-                    transition={{ duration: 0.8, repeat: Infinity }}
-                    className="text-purple-400 ml-2"
-                  >
-                    ▮
-                  </motion.span>
-                </div>
-              </motion.div>
             </div>
+
+            {/* Typewriter role */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="glass-card rounded-2xl px-5 py-4 inline-flex items-center min-h-[52px]"
+            >
+              <span className="text-xl md:text-2xl font-semibold gradient-text-cool">
+                {displayText}
+              </span>
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{ duration: 0.7, repeat: Infinity }}
+                className="text-2xl font-light text-purple-400 ml-1"
+              >
+                |
+              </motion.span>
+            </motion.div>
 
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg text-gray-300 leading-relaxed max-w-lg"
+              className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg"
             >
-              Building intelligent solutions through <span className="text-purple-400 font-semibold">Generative AI</span>, <span className="text-blue-400 font-semibold">Agentic Systems</span>, and <span className="text-green-400 font-semibold">Full-Stack Development</span>. Specializing in LLMs, RAG systems, and transforming cutting-edge AI research into real-world applications.
+              AI-driven{" "}
+              <span className="text-purple-400 font-medium">Agentic AI Engineer</span>{" "}
+              building autonomous multi-agent systems,{" "}
+              <span className="text-blue-400 font-medium">Generative AI</span> solutions, and{" "}
+              <span className="text-emerald-400 font-medium">Full-Stack Applications</span>.
+              Specializing in LLMs, RAG, CrewAI, and deploying intelligent systems to production.
             </motion.p>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-4 py-6 border-t border-b border-purple-500/20"
-            >
-              {[
-                { value: '89+', label: 'AI Projects' },
-                { value: '2+', label: 'Years Experience' },
-                { value: '9', label: 'Expertise Areas' }
-              ].map((stat, i) => (
-                <div key={i} className="text-center">
-                  <motion.div
-                    className="text-3xl font-bold gradient-text"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <div className="text-sm text-gray-400 mt-2">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex gap-4 flex-wrap"
+              transition={{ delay: 0.6 }}
+              className="flex flex-wrap gap-3 pt-2"
             >
               <Button
                 size="lg"
-                onClick={() => scrollToSection('projects')}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 glow"
+                onClick={() => scrollToSection("projects")}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white shadow-lg shadow-purple-500/20 transition-all duration-300 text-base px-7"
               >
-                <span className="mr-2">🚀</span> Explore My Work
+                Explore My Work
+                <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
               <Link href="https://github.com/MSMuneerIqbal" target="_blank">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-purple-500/50 hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300"
+                  className="border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 text-base"
                 >
-                  <span className="mr-2">💻</span> GitHub
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub
                 </Button>
               </Link>
               <Link href="https://linkedin.com/in/muneeriqbal729" target="_blank">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-blue-500/50 hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300"
+                  className="border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 text-base"
                 >
-                  <span className="mr-2">💼</span> LinkedIn
+                  <Linkedin className="mr-2 h-4 w-4" />
+                  LinkedIn
                 </Button>
               </Link>
             </motion.div>
+
+            {/* Stats row */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex gap-8 pt-6 border-t border-white/5"
+            >
+              {[
+                { value: "89+", label: "Projects" },
+                { value: "2+", label: "Years Exp." },
+                { value: "9", label: "Expertise Areas" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold gradient-text">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
 
-          {/* Right Content - AI Visualization */}
+          {/* Right - Visual */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-96 lg:h-full"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="flex items-center justify-center"
           >
-            <div className="absolute inset-0 gradient-border rounded-3xl p-8 flex items-center justify-center overflow-hidden group">
-              {/* AI Neural Network Visualization */}
-              <div className="relative w-full h-full flex items-center justify-center">
-                {/* Center Node */}
-                <motion.div
-                  className="absolute w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full shadow-xl glow flex items-center justify-center text-3xl"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  🧠
-                </motion.div>
-
-                {/* Orbiting Nodes */}
-                {[
-                  { icon: '🤖', angle: 0, label: 'AI' },
-                  { icon: '🔮', angle: 60, label: 'LLM' },
-                  { icon: '📊', angle: 120, label: 'RAG' },
-                  { icon: '⚡', angle: 180, label: 'Speed' },
-                  { icon: '🎯', angle: 240, label: 'Precision' },
-                  { icon: '🚀', angle: 300, label: 'Scale' }
-                ].map((node, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute"
-                    animate={{
-                      x: Math.cos((node.angle * Math.PI) / 180) * 100,
-                      y: Math.sin((node.angle * Math.PI) / 180) * 100,
-                    }}
-                    transition={{ duration: 3 + i * 0.5, repeat: Infinity, type: 'tween' }}
-                  >
-                    <motion.div
-                      className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-green-500 rounded-full shadow-lg flex items-center justify-center text-xl glow"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 8, repeat: Infinity, linear: true }}
-                    >
-                      {node.icon}
-                    </motion.div>
-                  </motion.div>
-                ))}
-
-                {/* Connecting Lines */}
-                <svg className="absolute inset-0 w-full h-full" style={{ filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.3))' }}>
-                  {[
-                    { angle: 0 },
-                    { angle: 60 },
-                    { angle: 120 },
-                    { angle: 180 },
-                    { angle: 240 },
-                    { angle: 300 }
-                  ].map((node, i) => {
-                    const x1 = 50 + 20 * Math.cos((node.angle * Math.PI) / 180)
-                    const y1 = 50 + 20 * Math.sin((node.angle * Math.PI) / 180)
-                    const x2 = 50 + 40 * Math.cos((node.angle * Math.PI) / 180)
-                    const y2 = 50 + 40 * Math.sin((node.angle * Math.PI) / 180)
-                    return (
-                      <motion.line
-                        key={i}
-                        x1={`${x1}%`}
-                        y1={`${y1}%`}
-                        x2={`${x2}%`}
-                        y2={`${y2}%`}
-                        stroke="url(#gradient)"
-                        strokeWidth="2"
-                        opacity="0.5"
-                        animate={{ opacity: [0.3, 0.8, 0.3] }}
-                        transition={{ duration: 2 + i * 0.3, repeat: Infinity }}
-                      />
-                    )
-                  })}
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="rgb(168, 85, 247)" />
-                      <stop offset="100%" stopColor="rgb(59, 130, 246)" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-            </div>
+            <NeuralRing />
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.button
+          onClick={() => scrollToSection("about")}
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="text-muted-foreground/50 hover:text-purple-400 transition-colors"
+        >
+          <ArrowDown className="h-5 w-5" />
+        </motion.button>
+      </motion.div>
     </section>
-  )
+  );
 }

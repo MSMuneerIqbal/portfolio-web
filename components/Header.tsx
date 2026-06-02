@@ -1,118 +1,165 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { Moon, Sun, Sparkles, Cpu } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Moon, Sun, Sparkles, Cpu, Menu, X } from "lucide-react";
+import { useTheme } from "next-themes";
 
-const Header = () => {
-  const [mounted, setMounted] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+const menuItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
+];
+
+export default function Header() {
+  const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true)
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    setMounted(true);
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' }
-  ]
+  // Close mobile menu on resize
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
-  const scrollToSection = (href: string) => {
-    const id = href.replace('#', '')
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-    setMobileMenuOpen(false)
-  }
+  const scrollTo = (href: string) => {
+    document.getElementById(href.replace("#", ""))?.scrollIntoView({ behavior: "smooth" });
+    setMobileOpen(false);
+  };
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-purple-500/10 shadow-lg shadow-purple-500/5'
-          : 'bg-transparent'
-      }`}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="container mx-auto px-4 py-4">
-        <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2 cursor-pointer group"
-            onClick={() => scrollToSection('#home')}
-          >
-            <div className="relative">
-              <Cpu className="h-8 w-8 text-purple-500 group-hover:text-purple-400 transition-colors" />
-              <motion.div
-                className="absolute inset-0 bg-purple-500/20 rounded-lg blur"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-            <span className="text-xl font-bold gradient-text">Muneer</span>
-          </motion.div>
+      <div
+        className={`transition-all duration-500 ${
+          isScrolled
+            ? "glass-strong shadow-lg shadow-purple-500/5"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-3">
+          <nav className="flex items-center justify-between">
+            {/* Logo */}
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => scrollTo("#home")}
+              className="flex items-center gap-2.5 group"
+            >
+              <div className="relative">
+                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/20 flex items-center justify-center group-hover:border-purple-500/40 transition-colors">
+                  <Cpu className="h-5 w-5 text-purple-400" />
+                </div>
+              </div>
+              <span className="text-xl font-bold gradient-text">Muneer</span>
+            </motion.button>
 
-          {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center space-x-1">
-            {menuItems.map((item, index) => (
-              <motion.li
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <button
-                  onClick={() => scrollToSection(item.href)}
-                  className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors group"
+            {/* Desktop nav */}
+            <ul className="hidden lg:flex items-center gap-1">
+              {menuItems.map((item, i) => (
+                <motion.li
+                  key={item.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * i }}
                 >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-300" />
-                </button>
-              </motion.li>
-            ))}
-          </ul>
+                  <button
+                    onClick={() => scrollTo(item.href)}
+                    className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white transition-colors group"
+                  >
+                    {item.name}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-3/4 transition-all duration-300 rounded" />
+                  </button>
+                </motion.li>
+              ))}
+            </ul>
 
-          {/* Right Side - Theme Toggle & CTA */}
-          <div className="flex items-center space-x-4">
-            {mounted && (
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg hover:bg-purple-500/10 transition-colors"
+            {/* Right actions */}
+            <div className="flex items-center gap-2">
+              {mounted && (
+                <motion.button
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.92 }}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="w-9 h-9 rounded-lg glass-card flex items-center justify-center hover:border-purple-500/30 transition-all"
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-4 w-4 text-yellow-400" />
+                  ) : (
+                    <Moon className="h-4 w-4 text-purple-400" />
+                  )}
+                </motion.button>
+              )}
+
+              <button
+                onClick={() => scrollTo("#contact")}
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-sm font-medium transition-all duration-300 shadow-lg shadow-purple-500/15"
               >
-                {theme === 'dark' ? (
-                  <Sun className="h-5 w-5 text-yellow-500" />
-                ) : (
-                  <Moon className="h-5 w-5 text-purple-500" />
-                )}
-              </motion.button>
-            )}
-            <Link href="#contact">
-              <Button className="hidden sm:flex gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 glow">
-                <Sparkles className="h-4 w-4" />
+                <Sparkles className="h-3.5 w-3.5" />
                 Get in Touch
-              </Button>
-            </Link>
-          </div>
-        </nav>
-      </div>
-    </motion.header>
-  )
-}
+              </button>
 
-export default Header
+              {/* Mobile toggle */}
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="lg:hidden w-9 h-9 rounded-lg glass-card flex items-center justify-center"
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden glass-strong border-t border-white/5 overflow-hidden"
+          >
+            <div className="container mx-auto px-4 py-4">
+              <ul className="space-y-1">
+                {menuItems.map((item, i) => (
+                  <motion.li
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <button
+                      onClick={() => scrollTo(item.href)}
+                      className="w-full text-left px-4 py-3 rounded-lg text-muted-foreground hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
+                    >
+                      {item.name}
+                    </button>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
+}

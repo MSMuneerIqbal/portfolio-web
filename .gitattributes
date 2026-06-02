@@ -1,0 +1,6 @@
+# Force LF line endings for files that break on Vercel
+*.json text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
