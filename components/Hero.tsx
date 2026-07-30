@@ -144,7 +144,9 @@ export default function Hero() {
       className="min-h-screen relative overflow-hidden flex items-center"
     >
       {/* Background */}
-      <div className="absolute inset-0 dot-pattern opacity-30" />
+      <div className="absolute inset-0 cyber-grid" />
+      <div className="absolute inset-0 dot-pattern opacity-20" />
+      <div className="scan-beam" />
       <FloatingOrbs />
 
       <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">

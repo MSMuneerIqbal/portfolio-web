@@ -33,7 +33,7 @@ const projectCategories = [
         description: "Healthcare operations automation platform with intelligent workflow management",
         image: "/project3.jpg",
         tags: ["Python", "LLMs", "FastAPI", "Database"],
-        demo: "https://github.com/MSMuneerIqbal/Hospital-Ai-Assistant",
+        isPrivate: true,
       },
       {
         title: "Upwork Proposal Agent",
@@ -43,10 +43,10 @@ const projectCategories = [
         isPrivate: true,
       },
       {
-        title: "Qyra - Agentic AI MVP",
-        description: "Research and automation platform with multi-agent orchestration",
+        title: "OBS Agentic AI Assistant",
+        description: "Full-stack agentic AI assistant with agentic search, frontend and backend services",
         image: "/project5.png",
-        tags: ["Python", "FastAPI", "LLMs"],
+        tags: ["Python", "TypeScript", "FastAPI", "LLMs"],
         isPrivate: true,
         featured: true,
       },
@@ -199,11 +199,11 @@ const projectCategories = [
     color: "from-amber-500 to-yellow-600",
     projects: [
       {
-        title: "OptifySoft SaaS",
-        description: "Business optimization and automation SaaS platform",
+        title: "OptifyServe SaaS",
+        description: "UAE-based business optimization and automation SaaS platform",
         image: "/project5.png",
-        tags: ["Next.js", "Python", "FastAPI"],
-        demo: "https://github.com/MSMuneerIqbal/optifyserve-frontend-backend",
+        tags: ["Next.js", "TypeScript", "Python", "FastAPI"],
+        isPrivate: true,
         featured: true,
       },
       {

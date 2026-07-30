@@ -3,8 +3,8 @@
     "name": "Muneer Iqbal",
     "title": "Full-Stack AI/ML & Agentic AI Developer | GenAI Engineer",
     "bio": "Passionate full-stack developer specializing in Agentic AI, Generative AI, Machine Learning, and modern web development. Experienced in building scalable applications with AI integration.",
-    "location": "Pakistan",
-    "email": "muneeriqbal@example.com",
+    "location": "Lahore, Pakistan",
+    "email": "muneeriqbal729@gmail.com",
     "github": "https://github.com/MSMuneerIqbal",
     "portfolio": "https://muneer-iqbal.vercel.app"
   },
@@ -227,8 +227,7 @@
           "name": "portfolio-web",
           "description": "Professional portfolio website showcasing projects and skills",
           "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "url": "https://github.com/MSMuneerIqbal/portfolio-web",
-          "liveUrl": "https://muneer-iqbal.vercel.app"
+          "url": "https://github.com/MSMuneerIqbal/portfolio-web"
         },
         {
           "name": "kashibaba.pk",

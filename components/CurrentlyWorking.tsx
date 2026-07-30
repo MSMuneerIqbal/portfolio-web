@@ -1,42 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Building2, ExternalLink } from "lucide-react";
+import { Cpu, Building2 } from "lucide-react";
 
 const companies = [
   {
-    name: "WebotechStudio",
-    role: "Co-Founder & AI Engineer",
+    name: "Semantechs",
+    role: "AI Agent Engineer",
     period: "2026 – Present",
     description:
-      "Building a large-scale OLX-type marketplace platform for the Saudi market. Leading full-stack development with Next.js, TypeScript, and AI-powered features for a seamless classifieds experience.",
+      "Designing and shipping agentic AI systems for enterprise clients — multi-agent orchestration pipelines, AI assistants, and intelligent automation built on LLMs, MCP servers, and tool-calling architectures.",
     color: "from-violet-500 to-purple-600",
-    icon: "🏢",
-  },
-  {
-    name: "Semantechs.com",
-    role: "Agentic AI Engineer",
-    period: "2026 – Present",
-    description:
-      "Developing advanced agentic AI systems and AI assistants. Architecting multi-agent orchestration pipelines and intelligent automation solutions for enterprise clients.",
-    color: "from-blue-500 to-cyan-600",
     icon: "🤖",
   },
   {
-    name: "7Star Laptops",
-    role: "Full-Stack Developer",
+    name: "7Star Laptop Battery Station",
+    role: "Software Engineer",
     period: "2026 – Present",
     description:
-      "Developed complete POS (Point of Sale) software suite and built the e-commerce platform 7starbattery.pk. Handling inventory management, sales tracking, and online retail operations.",
+      "Engineered the complete POS software suite, warehouse stock applications, and inventory systems powering retail operations — from raw-stock intake to point-of-sale and reporting.",
     color: "from-emerald-500 to-teal-600",
     icon: "💻",
   },
   {
-    name: "Optifyserve.com",
-    role: "SaaS Developer",
+    name: "OptifyServe",
+    role: "SaaS Application Developer",
     period: "2026 – Present",
     description:
-      "Building a SaaS application for the UAE market focused on business optimization and automation. Full-stack development with Next.js, Python FastAPI, and PostgreSQL.",
+      "Building a UAE-based SaaS platform for business optimization and automation — full-stack development across Next.js, TypeScript, Python FastAPI, and PostgreSQL.",
     color: "from-orange-500 to-red-500",
     icon: "☁️",
   },
@@ -73,11 +64,11 @@ export default function CurrentlyWorking() {
             <span className="gradient-text">Working</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Collaborating with multiple companies across agentic AI, SaaS, and e-commerce
+            Working with three companies across agentic AI, retail software, and SaaS
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {companies.map((company, i) => (
             <motion.div
               key={i}

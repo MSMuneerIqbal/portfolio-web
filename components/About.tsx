@@ -93,13 +93,13 @@ const expertiseAreas = [
 const journey = [
   {
     year: "2026",
-    title: "AI Engineer @ Semantechs & WebotechStudio",
-    desc: "Building agentic AI systems, AI assistants, and a large-scale OLX-type Saudi marketplace. Co-founder of WebotechStudio.",
+    title: "AI Agent Engineer @ Semantechs",
+    desc: "Building agentic AI systems, AI assistants, and multi-agent orchestration pipelines for enterprise clients.",
   },
   {
     year: "2026",
-    title: "Full-Stack Dev @ 7Star Laptops & Optifyserve",
-    desc: "Developed POS software, e-commerce store 7starbattery.pk, and SaaS platform optifyserve.com for UAE market.",
+    title: "Software Engineer @ 7Star & OptifyServe",
+    desc: "POS suite and warehouse systems for 7Star Laptop Battery Station; UAE-based SaaS platform at OptifyServe.",
   },
   {
     year: "2025",
@@ -198,7 +198,7 @@ export default function About() {
                 <div>
                   <h3 className="font-semibold text-lg">Muneer Iqbal</h3>
                   <p className="text-sm text-muted-foreground flex items-center gap-1">
-                    <MapPin className="h-3 w-3" /> Pakistan
+                    <MapPin className="h-3 w-3" /> Lahore, Pakistan
                   </p>
                 </div>
               </div>

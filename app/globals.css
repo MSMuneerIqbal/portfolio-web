@@ -237,6 +237,34 @@
     animation: shimmer 3s infinite;
   }
 
+  /* Futuristic cyber grid background */
+  .cyber-grid {
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, black 25%, transparent 78%);
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, black 25%, transparent 78%);
+  }
+
+  /* Horizontal scan beam */
+  .scan-beam {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: linear-gradient(180deg, transparent, rgba(168, 85, 247, 0.05), rgba(59, 130, 246, 0.07), transparent);
+    animation: scan-move 9s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes scan-move {
+    0%, 100% { top: -10%; opacity: 0; }
+    15% { opacity: 1; }
+    50% { top: 85%; opacity: 1; }
+    65% { opacity: 0; }
+  }
+
   /* Dot pattern background */
   .dot-pattern {
     background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);

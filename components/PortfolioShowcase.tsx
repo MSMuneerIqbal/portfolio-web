@@ -275,7 +275,7 @@ export function PortfolioShowcase() {
               Visit GitHub
             </a>
             <a
-              href="mailto:muneeriqbal@example.com"
+              href="mailto:muneeriqbal729@gmail.com"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
             >
               Send Email

@@ -144,7 +144,7 @@ Data handling and visualization
 
 - **GitHub**: [github.com/MSMuneerIqbal](https://github.com/MSMuneerIqbal)
 - **Portfolio**: [muneer-iqbal.vercel.app](https://muneer-iqbal.vercel.app)
-- **Email**: muneeriqbal@example.com
+- **Email**: muneeriqbal729@gmail.com
 - **Location**: Pakistan
 
 ## 🚀 Let's Collaborate!

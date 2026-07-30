@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   description: 'Agentic AI Engineer specializing in autonomous multi-agent systems, Generative AI, RAG pipelines, and Full-Stack Development. 89+ projects showcasing LLMs, CrewAI, and enterprise AI solutions.',
   keywords: 'Agentic AI Engineer, AI Developer, Generative AI, Multi-Agent Systems, LLMs, RAG, Full-Stack Developer, Python, TypeScript, Next.js, LangChain, CrewAI',
   authors: [{ name: 'Muneer Iqbal' }],
+  icons: {
+    icon: '/logo.svg',
+    apple: '/logo.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

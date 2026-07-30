@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun, Sparkles, Cpu, Menu, X } from "lucide-react";
+import { Moon, Sun, Sparkles, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const menuItems = [
   { name: "Home", href: "#home" },
@@ -62,9 +63,14 @@ export default function Header() {
               className="flex items-center gap-2.5 group"
             >
               <div className="relative">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/20 flex items-center justify-center group-hover:border-purple-500/40 transition-colors">
-                  <Cpu className="h-5 w-5 text-purple-400" />
-                </div>
+                <Image
+                  src="/logo.svg"
+                  alt="Muneer Iqbal logo"
+                  width={36}
+                  height={36}
+                  className="rounded-lg group-hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] transition-all"
+                  priority
+                />
               </div>
               <span className="text-xl font-bold gradient-text">Muneer</span>
             </motion.button>
