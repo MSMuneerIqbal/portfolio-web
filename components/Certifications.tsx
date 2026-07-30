@@ -3,65 +3,93 @@
 import { motion } from "framer-motion";
 import { Award, Briefcase, ExternalLink, GraduationCap } from "lucide-react";
 
+// Verified at https://panaversity.org/p/muneeriqbal729-lf7k
+const CREDENTIAL_URL = "https://panaversity.org/p/muneeriqbal729-lf7k";
+
 const certifications = [
   {
-    title: "Agentic AI Development",
-    org: "Presidential Initiative for AI & Computing (PIAIC)",
-    year: "2025 – Present",
-    icon: "🤖",
+    title: "Agent Factory Fundamentals: Building Digital FTEs",
+    org: "Panaversity / PIAIC · L1:P1-AGFF",
+    year: "Feb 2026 · Scored 78%",
+    icon: "🏭",
     color: "from-violet-500 to-purple-600",
+    url: CREDENTIAL_URL,
   },
   {
-    title: "Generative AI Engineering",
-    org: "Pakistan Institute of AI & Cloud Computing (PIAIC)",
-    year: "2024",
-    icon: "🎖️",
+    title: "Model Context Protocol (MCP) Level 2 Certification",
+    org: "Panaversity / PIAIC · L2:P2-MCP",
+    year: "Nov 2025 · Scored 73%",
+    icon: "🔌",
+    color: "from-blue-500 to-cyan-600",
+    url: CREDENTIAL_URL,
+  },
+  {
+    title: "Prompt & Context Engineering",
+    org: "Panaversity / PIAIC · L1:P0-PTE",
+    year: "Sep 2025 · Scored 73%",
+    icon: "✍️",
+    color: "from-sky-500 to-blue-600",
+    url: CREDENTIAL_URL,
+  },
+  {
+    title: "Level 2 Fundamentals of Agentic AI Professional",
+    org: "Panaversity / PIAIC · L2:P1-PAI",
+    year: "Jul 2025 · Scored 70%",
+    icon: "🤖",
     color: "from-purple-500 to-violet-600",
+    url: CREDENTIAL_URL,
+  },
+  {
+    title: "Fundamentals of Agentic AI Exam",
+    org: "Panaversity / PIAIC · L1:P4-FAI",
+    year: "Jun 2025 · Scored 78%",
+    icon: "🎖️",
+    color: "from-emerald-500 to-teal-600",
+    url: CREDENTIAL_URL,
   },
   {
     title: "Applied Generative AI Fundamentals",
     org: "Pak Angels",
     year: "2024",
     icon: "📜",
-    color: "from-blue-500 to-cyan-600",
-  },
-  {
-    title: "Cloud-Native Modern Python Development",
-    org: "PIAIC",
-    year: "2024",
-    icon: "☁️",
-    color: "from-emerald-500 to-teal-600",
-  },
-  {
-    title: "AI Engineering Graduate",
-    org: "Pakistan Institute of Artificial Intelligence",
-    year: "2024",
-    icon: "🧠",
     color: "from-orange-500 to-red-500",
   },
 ];
 
 const experience = [
   {
-    role: "AI Engineer Intern",
-    company: "Innovidio.com",
-    period: "2025 (3 months)",
-    desc: "Explored agentic AI automation systems and contributed to Qyra AI development.",
+    role: "AI Agent Engineer",
+    company: "Semantechs",
+    period: "Jan 2026 – Present",
+    desc: "Agentic AI systems for enterprise clients — multi-agent orchestration, MCP servers, and AI assistants.",
   },
   {
-    role: "AI Developer",
-    company: "Ai World",
-    period: "2024 – Present",
-    desc: "Led enterprise AI application development and mentored junior developers.",
+    role: "Software Engineer",
+    company: "7Star Laptop Battery Station",
+    period: "Jan 2026 – Present",
+    desc: "POS suite, warehouse stock applications, and the 7starbattery.pk e-commerce platform.",
+  },
+  {
+    role: "SaaS Application Developer",
+    company: "OptifyServe",
+    period: "Jan 2026 – Present",
+    desc: "Full-stack development of a UAE-based business optimisation and automation SaaS platform.",
+  },
+  {
+    role: "AI Engineer Intern",
+    company: "Innovidio",
+    period: "2025",
+    desc: "Contributed to agentic AI automation systems and the Qyra AI research platform.",
   },
 ];
 
 const education = [
   {
-    degree: "Agentic AI & MCP Development",
+    degree: "Certified Cloud Applied Generative AI Engineer",
     institution: "PIAIC — Presidential Initiative for AI & Computing",
-    period: "2025 – Present",
-    desc: "Advanced agentic AI systems, MCP server development, prompt & context engineering, and AI-driven development.",
+    period: "Jul 2024 – Dec 2025",
+    desc: "Agentic AI systems, MCP server development, prompt & context engineering, and cloud-native AI deployment.",
+    url: CREDENTIAL_URL,
   },
   {
     degree: "BS ADP Artificial Intelligence",
@@ -130,27 +158,55 @@ export default function Certifications() {
                 <h3 className="text-xl font-semibold">Certifications</h3>
               </div>
               <div className="space-y-3">
-                {certifications.map((cert, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className={`glass-card rounded-xl p-5 group relative overflow-hidden`}
-                  >
-                    <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${cert.color}`} />
-                    <div className="flex items-start gap-3 pl-1">
-                      <span className="text-2xl">{cert.icon}</span>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-sm">{cert.title}</h4>
-                        <p className="text-xs text-muted-foreground mt-0.5">{cert.org}</p>
-                        <span className="text-xs font-medium text-blue-400 mt-1 inline-block">{cert.year}</span>
+                {certifications.map((cert, i) => {
+                  const Wrapper = cert.url ? motion.a : motion.div;
+                  return (
+                    <Wrapper
+                      key={i}
+                      {...(cert.url
+                        ? { href: cert.url, target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}
+                      className={`glass-card rounded-xl p-5 group relative overflow-hidden ${
+                        cert.url ? "block hover:border-blue-500/30" : ""
+                      }`}
+                    >
+                      <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${cert.color}`} />
+                      <div className="flex items-start gap-3 pl-1">
+                        <span className="text-2xl">{cert.icon}</span>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-sm group-hover:text-blue-400 transition-colors">
+                            {cert.title}
+                          </h4>
+                          <p className="text-xs text-muted-foreground mt-0.5">{cert.org}</p>
+                          <span className="text-xs font-medium text-blue-400 mt-1 inline-block">{cert.year}</span>
+                        </div>
+                        {cert.url && (
+                          <ExternalLink className="h-3.5 w-3.5 text-muted-foreground/40 group-hover:text-blue-400 transition-colors flex-shrink-0 mt-1" />
+                        )}
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </Wrapper>
+                  );
+                })}
               </div>
+
+              <a
+                href={CREDENTIAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card rounded-xl p-4 flex items-center justify-between group hover:border-blue-500/30 transition-all mt-3"
+              >
+                <div>
+                  <p className="text-sm font-medium">Verify all credentials</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    5 exams passed · 74% average · Panaversity
+                  </p>
+                </div>
+                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-blue-400 transition-colors" />
+              </a>
             </div>
 
             {/* Work Experience */}
