@@ -5,9 +5,19 @@ import { Cpu, Building2 } from "lucide-react";
 
 const companies = [
   {
+    name: "WeboTech Studio",
+    role: "Lead AI Engineer",
+    period: "Jan 2026 – Present",
+    description:
+      "Leading the AI and automation division — machine learning models, AI agents, chatbots, and custom integrations that streamline operations and support decision-making.",
+    color: "from-sky-500 to-blue-600",
+    icon: "🧠",
+    url: "https://webotechstudio.com/team/muneer-iqbal",
+  },
+  {
     name: "Semantechs",
     role: "AI Agent Engineer",
-    period: "2026 – Present",
+    period: "Jan 2026 – Present",
     description:
       "Designing and shipping agentic AI systems for enterprise clients — multi-agent orchestration pipelines, AI assistants, and intelligent automation built on LLMs, MCP servers, and tool-calling architectures.",
     color: "from-violet-500 to-purple-600",
@@ -16,7 +26,7 @@ const companies = [
   {
     name: "7Star Laptop Battery Station",
     role: "Software Engineer",
-    period: "2026 – Present",
+    period: "Jan 2026 – Present",
     description:
       "Engineered the complete POS software suite, warehouse stock applications, and inventory systems powering retail operations — from raw-stock intake to point-of-sale and reporting.",
     color: "from-emerald-500 to-teal-600",
@@ -25,7 +35,7 @@ const companies = [
   {
     name: "OptifyServe",
     role: "SaaS Application Developer",
-    period: "2026 – Present",
+    period: "Jan 2026 – Present",
     description:
       "Building a UAE-based SaaS platform for business optimization and automation — full-stack development across Next.js, TypeScript, Python FastAPI, and PostgreSQL.",
     color: "from-orange-500 to-red-500",
@@ -64,19 +74,26 @@ export default function CurrentlyWorking() {
             <span className="gradient-text">Working</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Working with three companies across agentic AI, retail software, and SaaS
+            Working across agentic AI, retail software, and SaaS platforms
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {companies.map((company, i) => (
-            <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          {companies.map((company, i) => {
+            const Card = company.url ? motion.a : motion.div;
+            return (
+            <Card
               key={i}
+              {...(company.url
+                ? { href: company.url, target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="glass-card rounded-2xl p-6 group relative overflow-hidden"
+              className={`glass-card rounded-2xl p-6 group relative overflow-hidden ${
+                company.url ? "block hover:border-sky-500/30" : ""
+              }`}
             >
               <div
                 className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${company.color} opacity-0 group-hover:opacity-100 transition-opacity`}
@@ -98,8 +115,9 @@ export default function CurrentlyWorking() {
                   </p>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </Card>
+            );
+          })}
         </div>
 
         {/* Bottom note */}

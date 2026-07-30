@@ -58,6 +58,12 @@ const certifications = [
 
 const experience = [
   {
+    role: "Lead AI Engineer",
+    company: "WeboTech Studio",
+    period: "Jan 2026 – Present",
+    desc: "Leading the AI and automation division — ML models, AI agents, chatbots, and custom integrations.",
+  },
+  {
     role: "AI Agent Engineer",
     company: "Semantechs",
     period: "Jan 2026 – Present",
