@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Star, Lock } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 const projectCategories = [
@@ -514,62 +513,52 @@ export default function Projects() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="glass-card rounded-2xl overflow-hidden group flex flex-col"
+                  className="glass-card rounded-2xl p-5 group flex flex-col"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-white/5">
-                    {project.isPrivate && (
-                      <div className="absolute top-3 right-3 z-10 flex items-center gap-1 bg-amber-600/90 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-full">
-                        <Lock size={10} />
-                        Private
-                      </div>
-                    )}
-                    <Image
-                      width={500}
-                      height={300}
-                      src={project.image}
-                      alt={project.title}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  <div className="p-5 flex flex-col flex-1">
-                    <h4 className="font-semibold mb-1.5 group-hover:text-purple-400 transition-colors">
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h4 className="font-semibold group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-4 flex-1 line-clamp-2">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs bg-white/5 border border-white/5 rounded-full px-2.5 py-1 text-muted-foreground"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {project.demo ? (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-white/5 hover:bg-purple-500/10 text-sm font-medium text-muted-foreground hover:text-purple-400 border border-white/5 hover:border-purple-500/30 transition-all"
-                      >
-                        <Github size={14} />
-                        View Repository
-                        <ExternalLink size={12} className="opacity-40" />
-                      </a>
-                    ) : (
-                      <span className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-white/5 text-sm text-muted-foreground/50 border border-white/5 cursor-not-allowed">
-                        <Lock size={14} />
-                        Private Repository
+                    {project.isPrivate && (
+                      <span className="flex-shrink-0 inline-flex items-center gap-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                        <Lock size={9} />
+                        Private
                       </span>
                     )}
                   </div>
+
+                  <p className="text-sm text-muted-foreground mb-4 flex-1">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs bg-white/5 border border-white/5 rounded-full px-2.5 py-1 text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-white/5 hover:bg-purple-500/10 text-sm font-medium text-muted-foreground hover:text-purple-400 border border-white/5 hover:border-purple-500/30 transition-all"
+                    >
+                      <Github size={14} />
+                      View Repository
+                      <ExternalLink size={12} className="opacity-40" />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-white/5 text-sm text-muted-foreground/50 border border-white/5 cursor-not-allowed">
+                      <Lock size={14} />
+                      Private Repository
+                    </span>
+                  )}
                 </motion.div>
               ))}
             </div>

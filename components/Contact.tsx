@@ -82,6 +82,17 @@ export default function Contact() {
                 </div>
               </a>
             ))}
+
+            {/* WhatsApp CTA */}
+            <a
+              href="https://wa.me/923045820729"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full p-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 text-white text-sm font-semibold shadow-lg shadow-emerald-500/20 transition-all duration-300 group"
+            >
+              <Phone className="h-4 w-4 group-hover:scale-110 transition-transform" />
+              Chat on WhatsApp
+            </a>
           </motion.div>
 
           {/* Contact form */}
