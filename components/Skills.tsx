@@ -112,7 +112,7 @@ function SkillBar({ name, pct, barColor }: { name: string; pct: number; barColor
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="skills" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-blue-600/4 rounded-full blur-[120px]" />
@@ -126,7 +126,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
           <motion.div
             initial={{ scale: 0 }}

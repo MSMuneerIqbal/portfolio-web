@@ -142,7 +142,7 @@ const techMarquee = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="about" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px]" />
@@ -157,7 +157,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-9 md:mb-10"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -268,7 +268,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 max-w-6xl mx-auto"
+          className="mt-9 max-w-6xl mx-auto"
         >
           <div className="glass-card rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-3 mb-6">
@@ -296,7 +296,7 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 max-w-6xl mx-auto"
+          className="mt-9 max-w-6xl mx-auto"
         >
           <p className="text-center text-sm text-muted-foreground mb-4">Technologies I work with</p>
           <div className="relative overflow-hidden glass-card rounded-2xl py-5">

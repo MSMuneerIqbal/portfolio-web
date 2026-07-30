@@ -23,7 +23,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/4 rounded-full blur-[120px]" />
         <div className="dot-pattern absolute inset-0 opacity-30" />
@@ -35,7 +35,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
           <motion.div
             initial={{ scale: 0 }}

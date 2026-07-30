@@ -20,7 +20,7 @@ const languages = [
 
 export default function GitHubStats() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-12 md:py-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-purple-600/3 rounded-full blur-[120px]" />
         <div className="dot-pattern absolute inset-0 opacity-30" />
@@ -32,7 +32,7 @@ export default function GitHubStats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
           <motion.div
             initial={{ scale: 0 }}

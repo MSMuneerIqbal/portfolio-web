@@ -141,7 +141,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen relative overflow-hidden flex items-center"
+      className="min-h-[88vh] relative overflow-hidden flex items-center"
     >
       {/* Background */}
       <div className="absolute inset-0 cyber-grid" />
@@ -149,8 +149,8 @@ export default function Hero() {
       <div className="scan-beam" />
       <FloatingOrbs />
 
-      <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 py-16 md:py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left - Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -265,7 +265,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex gap-8 pt-6 border-t border-white/5"
+              className="flex gap-8 pt-5 border-t border-white/5"
             >
               {[
                 { value: "89+", label: "Projects" },

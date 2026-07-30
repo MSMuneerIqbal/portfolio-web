@@ -403,12 +403,12 @@ export default function Projects() {
     ? projectCategories.filter((cat) => cat.category === selectedCategory)
     : showAll
     ? projectCategories
-    : projectCategories.slice(0, 5);
+    : projectCategories.slice(0, 3);
 
   const totalProjects = projectCategories.reduce((sum, cat) => sum + cat.projects.length, 0);
 
   return (
-    <section id="projects" className="relative py-24 md:py-32">
+    <section id="projects" className="relative py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-purple-600/4 rounded-full blur-[120px]" />
         <div className="dot-pattern absolute inset-0 opacity-30" />
@@ -421,7 +421,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -448,7 +448,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap gap-2 justify-center mb-12"
+          className="flex flex-wrap gap-2 justify-center mb-8"
         >
           <button
             onClick={() => { setSelectedCategory(null); setShowAll(false); }}
@@ -493,9 +493,9 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-16"
+            className="mb-9"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl">{catGroup.icon}</span>
               <div>
                 <h3 className="text-xl font-semibold">{catGroup.category}</h3>

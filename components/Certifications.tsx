@@ -79,7 +79,7 @@ const education = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="certifications" className="relative py-12 md:py-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/4 rounded-full blur-[100px]" />
         <div className="dot-pattern absolute inset-0 opacity-30" />
@@ -91,7 +91,7 @@ export default function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
           <motion.div
             initial={{ scale: 0 }}
