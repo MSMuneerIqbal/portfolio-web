@@ -279,7 +279,7 @@ export default function Certifications() {
 
               {/* CV Link */}
               <motion.a
-                href="https://drive.google.com/file/d/1-P8tWUAzVaUTRjL-JLC9foBHte-XxMTV/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1CgiCAF7Vu6qtKUCbAJJVfiSftsMqvjx1/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
