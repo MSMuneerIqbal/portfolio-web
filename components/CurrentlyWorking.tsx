@@ -7,7 +7,7 @@ const companies = [
   {
     name: "WeboTech Studio",
     role: "Lead AI Engineer",
-    period: "Jan 2026 – Present",
+    period: "Sep 2025 – Present",
     description:
       "Leading the AI and automation division — machine learning models, AI agents, chatbots, and custom integrations that streamline operations and support decision-making.",
     color: "from-sky-500 to-blue-600",

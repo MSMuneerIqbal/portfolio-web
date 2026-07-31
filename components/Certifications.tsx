@@ -60,7 +60,7 @@ const experience = [
   {
     role: "Lead AI Engineer",
     company: "WeboTech Studio",
-    period: "Jan 2026 – Present",
+    period: "Sep 2025 – Present",
     desc: "Leading the AI and automation division — ML models, AI agents, chatbots, and custom integrations.",
   },
   {
