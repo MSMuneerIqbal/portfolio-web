@@ -93,18 +93,23 @@ const expertiseAreas = [
 const journey = [
   {
     year: "2026",
-    title: "AI Agent Engineer @ Semantechs",
+    title: "Agentic AI Engineer @ Semantechs",
     desc: "Building agentic AI systems, AI assistants, and multi-agent orchestration pipelines for enterprise clients.",
   },
   {
     year: "2026",
-    title: "Software Engineer @ 7Star & OptifyServe",
-    desc: "POS suite and warehouse systems for 7Star Laptop Battery Station; UAE-based SaaS platform at OptifyServe.",
+    title: "Senior Software Engineer @ 7Star",
+    desc: "POS suite, warehouse stock systems, and the 7starbattery.pk e-commerce platform.",
   },
   {
     year: "2025",
-    title: "AI Engineer Intern @ Innovidio.com",
-    desc: "Explored agentic AI automation systems and contributed to Qyra AI development.",
+    title: "Lead AI Engineer @ WeboTech Studio",
+    desc: "Leading the AI and automation division — ML models, AI agents, chatbots, and custom integrations.",
+  },
+  {
+    year: "2025",
+    title: "AI Engineer Intern @ Innovidio",
+    desc: "Contributed to agentic AI automation systems and the Qyra AI research platform.",
   },
   {
     year: "2025",

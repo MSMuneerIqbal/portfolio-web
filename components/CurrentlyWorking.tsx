@@ -16,7 +16,7 @@ const companies = [
   },
   {
     name: "Semantechs",
-    role: "AI Agent Engineer",
+    role: "Agentic AI Engineer",
     period: "Jan 2026 – Present",
     description:
       "Designing and shipping agentic AI systems for enterprise clients — multi-agent orchestration pipelines, AI assistants, and intelligent automation built on LLMs, MCP servers, and tool-calling architectures.",
@@ -25,21 +25,12 @@ const companies = [
   },
   {
     name: "7Star Laptop Battery Station",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "Jan 2026 – Present",
     description:
       "Engineered the complete POS software suite, warehouse stock applications, and inventory systems powering retail operations — from raw-stock intake to point-of-sale and reporting.",
     color: "from-emerald-500 to-teal-600",
     icon: "💻",
-  },
-  {
-    name: "OptifyServe",
-    role: "SaaS Application Developer",
-    period: "Jan 2026 – Present",
-    description:
-      "Building a UAE-based SaaS platform for business optimization and automation — full-stack development across Next.js, TypeScript, Python FastAPI, and PostgreSQL.",
-    color: "from-orange-500 to-red-500",
-    icon: "☁️",
   },
 ];
 
@@ -78,7 +69,7 @@ export default function CurrentlyWorking() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {companies.map((company, i) => {
             const Card = company.url ? motion.a : motion.div;
             return (

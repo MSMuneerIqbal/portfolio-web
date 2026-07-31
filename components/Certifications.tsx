@@ -64,27 +64,27 @@ const experience = [
     desc: "Leading the AI and automation division — ML models, AI agents, chatbots, and custom integrations.",
   },
   {
-    role: "AI Agent Engineer",
+    role: "Agentic AI Engineer",
     company: "Semantechs",
     period: "Jan 2026 – Present",
     desc: "Agentic AI systems for enterprise clients — multi-agent orchestration, MCP servers, and AI assistants.",
   },
   {
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     company: "7Star Laptop Battery Station",
     period: "Jan 2026 – Present",
     desc: "POS suite, warehouse stock applications, and the 7starbattery.pk e-commerce platform.",
   },
   {
     role: "SaaS Application Developer",
-    company: "OptifyServe",
-    period: "Jan 2026 – Present",
+    company: "OptifyServe · Dubai, UAE",
+    period: "Feb – Jun 2026",
     desc: "Full-stack development of a UAE-based business optimisation and automation SaaS platform.",
   },
   {
     role: "AI Engineer Intern",
     company: "Innovidio",
-    period: "2025",
+    period: "Mar – Jul 2025",
     desc: "Contributed to agentic AI automation systems and the Qyra AI research platform.",
   },
 ];
@@ -215,34 +215,6 @@ export default function Certifications() {
               </a>
             </div>
 
-            {/* Work Experience */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                  <Briefcase className="h-5 w-5 text-emerald-400" />
-                </div>
-                <h3 className="text-xl font-semibold">Work Experience</h3>
-              </div>
-              <div className="space-y-3">
-                {experience.map((exp, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                    className="glass-card rounded-xl p-5 group"
-                  >
-                    <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-semibold text-sm">{exp.role}</h4>
-                      <span className="text-xs text-muted-foreground flex-shrink-0 ml-2">{exp.period}</span>
-                    </div>
-                    <p className="text-xs text-emerald-400 mb-1">{exp.company}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{exp.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Column: Education */}
@@ -294,6 +266,39 @@ export default function Certifications() {
             </div>
           </motion.div>
         </div>
+
+        {/* Work Experience — full width so the cards fill the row */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto mt-8"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+              <Briefcase className="h-5 w-5 text-emerald-400" />
+            </div>
+            <h3 className="text-xl font-semibold">Work Experience</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {experience.map((exp, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="glass-card rounded-xl p-4 group"
+              >
+                <h4 className="font-semibold text-sm">{exp.role}</h4>
+                <p className="text-xs text-emerald-400 mt-0.5">{exp.company}</p>
+                <p className="text-[11px] text-muted-foreground/70 mt-0.5">{exp.period}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed mt-2">{exp.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
