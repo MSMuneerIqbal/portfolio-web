@@ -91,6 +91,12 @@ const experience = [
 
 const education = [
   {
+    degree: "MS Data Science",
+    institution: "The Islamia University of Bahawalpur",
+    period: "2026 – Present",
+    desc: "Currently pursuing — advanced data science and machine learning alongside full-time AI engineering work.",
+  },
+  {
     degree: "Certified Cloud Applied Generative AI Engineer",
     institution: "PIAIC — Presidential Initiative for AI & Computing",
     period: "Jul 2024 – Dec 2025",
@@ -101,7 +107,7 @@ const education = [
     degree: "BS ADP Artificial Intelligence",
     institution: "The Islamia University of Bahawalpur",
     period: "2022 – 2024",
-    desc: "Machine Learning, Deep Learning, and Natural Language Processing foundations.",
+    desc: "Graduated 2024. Machine Learning, Deep Learning, and Natural Language Processing foundations.",
   },
   {
     degree: "BCS (Computer Science)",

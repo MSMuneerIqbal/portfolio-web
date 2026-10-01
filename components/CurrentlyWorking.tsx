@@ -122,10 +122,11 @@ export default function CurrentlyWorking() {
           <div className="glass-card rounded-2xl p-5 inline-flex items-center gap-3">
             <Cpu className="h-4 w-4 text-purple-400" />
             <span className="text-sm text-muted-foreground">
-              Also continuing advanced Agentic AI education at{" "}
+              Currently pursuing an{" "}
               <span className="text-purple-400 font-medium">
-                PIAIC (Presidential Initiative for AI & Computing)
-              </span>
+                MS in Data Science
+              </span>{" "}
+              at The Islamia University of Bahawalpur
             </span>
           </div>
         </motion.div>
