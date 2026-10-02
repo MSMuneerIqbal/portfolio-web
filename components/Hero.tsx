@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Github, Linkedin, ArrowDown, Brain } from "lucide-react";
+import { Sparkles, Github, Linkedin, ArrowDown, Brain, Download } from "lucide-react";
 import Link from "next/link";
 
 const roles = [
@@ -238,6 +238,16 @@ export default function Hero() {
                 Explore My Work
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
+              <a href="/Muneer-Iqbal-CV.pdf" download="Muneer-Iqbal-CV.pdf">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/10 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300 text-base"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </Button>
+              </a>
               <Link href="https://github.com/MSMuneerIqbal" target="_blank">
                 <Button
                   size="lg"

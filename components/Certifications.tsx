@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, ExternalLink, GraduationCap } from "lucide-react";
+import { Award, Briefcase, Download, ExternalLink, GraduationCap } from "lucide-react";
 
 // Verified at https://panaversity.org/p/muneeriqbal729-lf7k
 const CREDENTIAL_URL = "https://panaversity.org/p/muneeriqbal729-lf7k";
@@ -255,20 +255,32 @@ export default function Certifications() {
                 </motion.div>
               ))}
 
-              {/* CV Link */}
-              <motion.a
-                href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* CV: direct download + online view */}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="glass-card rounded-xl p-4 flex items-center justify-between group hover:border-purple-500/30 transition-all mt-3"
+                className="grid grid-cols-2 gap-3 mt-3"
               >
-                <span className="text-sm font-medium">View Full CV</span>
-                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-purple-400 transition-colors" />
-              </motion.a>
+                <a
+                  href="/Muneer-Iqbal-CV.pdf"
+                  download="Muneer-Iqbal-CV.pdf"
+                  className="rounded-xl p-4 flex items-center justify-center gap-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 shadow-lg shadow-purple-500/20 transition-all group"
+                >
+                  <Download className="h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
+                  Download CV
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card rounded-xl p-4 flex items-center justify-center gap-2 text-sm font-medium group hover:border-purple-500/30 transition-all"
+                >
+                  View Online
+                  <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-purple-400 transition-colors" />
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         </div>
