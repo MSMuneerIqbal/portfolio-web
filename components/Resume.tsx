@@ -75,7 +75,7 @@ export default function Resume() {
             My professional journey and academic background
           </p>
           <motion.a
-            href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}

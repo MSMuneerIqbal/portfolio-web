@@ -272,7 +272,7 @@ export default function Certifications() {
                   Download CV
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_RnJb_ney9kNIU2icU8skjfBvzcIEkdt/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card rounded-xl p-4 flex items-center justify-center gap-2 text-sm font-medium group hover:border-purple-500/30 transition-all"
