@@ -1,16 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Star, Lock } from "lucide-react";
+import { ExternalLink, Github, Globe, Star, Lock } from "lucide-react";
 import { useState } from "react";
 
-const projectCategories = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  image?: string;
+  demo?: string;
+  live?: string;
+  isPrivate?: boolean;
+  featured?: boolean;
+};
+
+type ProjectCategory = {
+  icon: string;
+  category: string;
+  desc: string;
+  color: string;
+  projects: Project[];
+};
+
+const projectCategories: ProjectCategory[] = [
   {
     icon: "🤖",
     category: "Agentic AI Systems",
     desc: "Autonomous AI agents for complex task automation",
     color: "from-violet-500 to-purple-600",
     projects: [
+      {
+        title: "Hospital Organizational Brain",
+        description: "Three production AI services for a hospital: an assistant with RAG plus 47 live database tools over MCP, a document ingestion agent with human approval, and a multi-tenant agentic search that returns cited answers",
+        tags: ["OpenAI Agents SDK", "FastMCP", "Qdrant", "Pinecone", "MongoDB"],
+        isPrivate: true,
+        featured: true,
+      },
+      {
+        title: "7Star E-commerce AI Agents",
+        description: "AI agents for a live laptop-battery store: product description, SEO and blog writers, a blog translator, and a store assistant that answers from the catalogue. Every draft is human-reviewed",
+        tags: ["Python", "FastAPI", "OpenAI Agents SDK", "DeepSeek", "Gemini"],
+        isPrivate: true,
+        featured: true,
+        live: "https://7starbattery.pk",
+      },
       {
         title: "Weather Agent",
         description: "Real-time weather forecasting with conversational AI interface using Chainlit & OpenAI SDK",
@@ -26,13 +60,6 @@ const projectCategories = [
         tags: ["Python", "CrewAI", "Data Analysis"],
         demo: "https://github.com/MSMuneerIqbal/Market_Trends_Analyst_Agent",
         featured: true,
-      },
-      {
-        title: "Hospital AI Assistant",
-        description: "Healthcare operations automation platform with intelligent workflow management",
-        image: "/project3.jpg",
-        tags: ["Python", "LLMs", "FastAPI", "Database"],
-        isPrivate: true,
       },
       {
         title: "Upwork Proposal Agent",
@@ -95,7 +122,7 @@ const projectCategories = [
       },
       {
         title: "Document Ingestion Agent",
-        description: "Intelligent document ingestion and processing system",
+        description: "Extracts an organization's hierarchy from PDF, DOCX or Markdown with evidence and confidence scores, then waits for human approval before writing to MongoDB",
         image: "/project4.png",
         tags: ["Python", "LLMs", "Document Processing"],
         isPrivate: true,
@@ -551,6 +578,17 @@ export default function Projects() {
                     >
                       <Github size={14} />
                       View Repository
+                      <ExternalLink size={12} className="opacity-40" />
+                    </a>
+                  ) : project.live ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-white/5 hover:bg-emerald-500/10 text-sm font-medium text-muted-foreground hover:text-emerald-400 border border-white/5 hover:border-emerald-500/30 transition-all"
+                    >
+                      <Globe size={14} />
+                      Visit Live Store
                       <ExternalLink size={12} className="opacity-40" />
                     </a>
                   ) : (

@@ -96,7 +96,12 @@ Public repositories can be linked. Private projects are described only at the le
 ### Agentic AI systems
 - **Weather Agent** (public) — conversational agent calling a live weather API through function calling, served through a streaming Chainlit UI. Python, OpenAI Agents SDK, Chainlit, Gemini. https://github.com/MSMuneerIqbal/Weather-Agent-with-Chainlit-OpenAI-Agent-SDK
 - **Market Trends Analyst Agent** (public) — multi-agent CrewAI system that gathers market data and produces an analyst-style trend report. https://github.com/MSMuneerIqbal/Market_Trends_Analyst_Agent
-- **Hospital AI Assistant** (private) — healthcare operations automation platform with workflow management. Python, FastAPI, OpenAI Agents SDK.
+- **Hospital Organizational Brain** (private client work) — three production AI services for a hospital's Organizational Brain System:
+  1. An AI assistant (OpenAI Agents SDK, 26 tools): RAG over hospital documents (LlamaIndex + Pinecone) plus live MongoDB queries through a FastMCP server exposing 47 database tools; streams answers to a Chainlit UI.
+  2. A document ingestion agent: extracts an organization's hierarchy from PDF/DOCX/TXT/Markdown with evidence and confidence scores; an admin reviews and approves before anything is written to MongoDB.
+  3. A global agentic search service: hybrid retrieval in Qdrant plus MongoDB expansion, returning cited answers; multi-tenant with strict isolation, Redis cache/queue, 500+ automated tests.
+  Stack: Python, FastAPI, OpenAI Agents SDK, FastMCP, LlamaIndex, Pinecone, Qdrant, MongoDB, Redis, Chainlit, Docker.
+- **7Star E-commerce AI Agents** (private repo; live store https://7starbattery.pk) — an AI service for a laptop-battery store: product description writer, SEO writer with SEO reviewer, blog post writer (FAQ + SEO fields), blog translator, and a customer-facing store assistant that answers from the product catalogue. FastAPI + OpenAI Agents SDK, switchable between OpenAI, DeepSeek and Gemini; long generations run as background jobs; nothing publishes without human review.
 - **Upwork Proposal Agent** (private) — agent that generates personalised Upwork proposals.
 - **OBS Agentic AI Assistant** (private) — full-stack agentic assistant with agentic search, frontend and backend services.
 - **Agentic AI Tutor** (private) — AI tutoring platform with adaptive learning. TypeScript, Next.js.
@@ -107,7 +112,6 @@ Public repositories can be linked. Private projects are described only at the le
 - **Chat with Your Documents** (public, LangChain) — https://github.com/MSMuneerIqbal/chat-with-your-documents
 - **Multi-Search RAG Tool** (public) — https://github.com/MSMuneerIqbal/MultiSearch-Tool-RAG-WEB
 - **RAG with Streamlit and Groq** (public, local embeddings) — https://github.com/MSMuneerIqbal/Rag-streamlit-groq-Embed-localhf
-- **Document Ingestion Agent** (private)
 
 ### Machine learning and data science (all public)
 Heart Disease Classification (Streamlit, scikit-learn), English Learning Bot (GenAI Hackathon project), Image Restoration (autoencoders, TensorFlow), Sentiment Analysis on Daraz product reviews, Hand-Tracked Snake Game (OpenCV), Multilingual Translator, Donation Prediction Bot, CSV/XLSX Data Processor, and an ML/DL/NLP collection. All under https://github.com/MSMuneerIqbal
