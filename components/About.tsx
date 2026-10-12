@@ -99,7 +99,7 @@ const journey = [
   {
     year: "2026",
     title: "Senior Software Engineer @ 7Star",
-    desc: "POS suite, warehouse stock systems, and the 7starbattery.pk e-commerce platform.",
+    desc: "POS suite, warehouse stock systems and the store's e-commerce website.",
   },
   {
     year: "2025",

@@ -43,7 +43,7 @@ Last reviewed: 2026-10-13
 
 | Role | Organisation | Period | Notes |
 |:--|:--|:--|:--|
-| Senior Software Engineer | 7Star Laptop Battery Station | Jan – Sep 2026 | Built the POS software suite, warehouse stock applications and inventory systems for retail operations, from raw-stock intake to point-of-sale and reporting. Also the 7starbattery.pk e-commerce platform. |
+| Senior Software Engineer | 7Star Laptop Battery Station | Jan – Sep 2026 | Built the POS software suite, warehouse stock applications and inventory systems for retail operations, from raw-stock intake to point-of-sale and reporting. Also worked on the store's e-commerce website. Do not share the store's web address; it is client work. |
 | SaaS Application Developer | OptifyServe, Dubai, UAE | Feb – Jun 2026 | Full-stack development of a UAE-based business optimization and automation SaaS platform. Stack: Next.js, TypeScript, Python FastAPI, PostgreSQL, from schema design to deployment. |
 | AI Engineer Intern | Innovidio | Mar – Jul 2025 | Worked on agentic AI automation systems and the Qyra AI research platform. |
 
@@ -101,7 +101,7 @@ Public repositories can be linked. Private projects are described only at the le
   2. A document ingestion agent: extracts an organization's hierarchy from PDF/DOCX/TXT/Markdown with evidence and confidence scores; an admin reviews and approves before anything is written to MongoDB.
   3. A global agentic search service: hybrid retrieval in Qdrant plus MongoDB expansion, returning cited answers; multi-tenant with strict isolation, Redis cache/queue, 500+ automated tests.
   Stack: Python, FastAPI, OpenAI Agents SDK, FastMCP, LlamaIndex, Pinecone, Qdrant, MongoDB, Redis, Chainlit, Docker.
-- **7Star E-commerce AI Agents** (private repo; live store https://7starbattery.pk) — an AI service for a laptop-battery store: product description writer, SEO writer with SEO reviewer, blog post writer (FAQ + SEO fields), blog translator, and a customer-facing store assistant that answers from the product catalogue. FastAPI + OpenAI Agents SDK, switchable between OpenAI, DeepSeek and Gemini; long generations run as background jobs; nothing publishes without human review.
+- **7Star E-commerce AI Agents** (private client work) — an AI service for an online laptop battery store: product description writer, SEO writer with SEO reviewer, blog post writer (FAQ + SEO fields), blog translator, and a customer-facing store assistant that answers from the product catalogue. FastAPI + OpenAI Agents SDK, switchable between OpenAI, DeepSeek and Gemini; long generations run as background jobs; nothing publishes without human review.
 - **Upwork Proposal Agent** (private) — agent that generates personalised Upwork proposals.
 - **OBS Agentic AI Assistant** (private) — full-stack agentic assistant with agentic search, frontend and backend services.
 - **Agentic AI Tutor** (private) — AI tutoring platform with adaptive learning. TypeScript, Next.js.

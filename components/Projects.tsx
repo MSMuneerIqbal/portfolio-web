@@ -39,11 +39,10 @@ const projectCategories: ProjectCategory[] = [
       },
       {
         title: "7Star E-commerce AI Agents",
-        description: "AI agents for a live laptop-battery store: product description, SEO and blog writers, a blog translator, and a store assistant that answers from the catalogue. Every draft is human-reviewed",
+        description: "AI agents for an online laptop battery store: product description, SEO and blog writers, a blog translator, and a store assistant that answers from the catalogue. Every draft is human-reviewed",
         tags: ["Python", "FastAPI", "OpenAI Agents SDK", "DeepSeek", "Gemini"],
         isPrivate: true,
         featured: true,
-        live: "https://7starbattery.pk",
       },
       {
         title: "Weather Agent",
