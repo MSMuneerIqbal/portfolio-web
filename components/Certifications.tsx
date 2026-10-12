@@ -72,7 +72,7 @@ const experience = [
   {
     role: "Senior Software Engineer",
     company: "7Star Laptop Battery Station",
-    period: "Jan 2026 – Present",
+    period: "Jan – Sep 2026",
     desc: "POS suite, warehouse stock applications, and the 7starbattery.pk e-commerce platform.",
   },
   {

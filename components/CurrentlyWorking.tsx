@@ -23,15 +23,6 @@ const companies = [
     color: "from-violet-500 to-purple-600",
     icon: "🤖",
   },
-  {
-    name: "7Star Laptop Battery Station",
-    role: "Senior Software Engineer",
-    period: "Jan 2026 – Present",
-    description:
-      "Engineered the complete POS software suite, warehouse stock applications, and inventory systems powering retail operations — from raw-stock intake to point-of-sale and reporting.",
-    color: "from-emerald-500 to-teal-600",
-    icon: "💻",
-  },
 ];
 
 export default function CurrentlyWorking() {
@@ -65,11 +56,11 @@ export default function CurrentlyWorking() {
             <span className="gradient-text">Working</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Working across agentic AI, retail software, and SaaS platforms
+            Leading AI delivery and building agentic systems for enterprise clients
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           {companies.map((company, i) => {
             const Card = company.url ? motion.a : motion.div;
             return (
