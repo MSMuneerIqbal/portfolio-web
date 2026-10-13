@@ -38,10 +38,10 @@ const projectCategories: ProjectCategory[] = [
         featured: true,
       },
       {
-        title: "7Star E-commerce AI Agents",
-        description: "AI agents for an online laptop battery store: product description, SEO and blog writers, a blog translator, and a store assistant that answers from the catalogue. Every draft is human-reviewed",
-        tags: ["Python", "FastAPI", "OpenAI Agents SDK", "DeepSeek", "Gemini"],
-        isPrivate: true,
+        title: "7Star E-commerce Store & AI Agents",
+        description: "The complete online store we built for a laptop battery business. An automated admin panel where AI agents write product descriptions, SEO tags and blog posts for review, plus an AI shopping assistant for customers",
+        tags: ["Next.js", "FastAPI", "OpenAI Agents SDK", "PostgreSQL", "Redis"],
+        live: "https://7starbattery.pk",
         featured: true,
       },
       {
