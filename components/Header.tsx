@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, Sparkles, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const menuItems = [
   { name: "Home", href: "#home" },
@@ -19,6 +20,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -34,9 +37,14 @@ export default function Header() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  // On project pages the sections don't exist, so go back to the home page section instead.
   const scrollTo = (href: string) => {
-    document.getElementById(href.replace("#", ""))?.scrollIntoView({ behavior: "smooth" });
     setMobileOpen(false);
+    if (pathname !== "/") {
+      router.push(`/${href}`);
+      return;
+    }
+    document.getElementById(href.replace("#", ""))?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

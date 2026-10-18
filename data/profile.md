@@ -3,7 +3,7 @@
 This file holds FACTS only. Behaviour and tone live in the system prompt.
 If a fact is not in this file, the agent must say it does not know.
 
-Last reviewed: 2026-10-13
+Last reviewed: 2026-10-18
 
 ---
 
@@ -103,7 +103,6 @@ Public repositories can be linked. Private projects are described only at the le
   Stack: Python, FastAPI, OpenAI Agents SDK, FastMCP, LlamaIndex, Pinecone, Qdrant, MongoDB, Redis, Chainlit, Docker.
 - **7Star E-commerce Store and AI Agents** (live at https://7starbattery.pk; code is private) — the complete online store built by his team for a laptop battery business: customers search batteries by laptop model or part number, order as guests and track orders. The admin panel is largely automated by AI agents: product description writer, SEO writer with SEO reviewer, blog post writer (FAQ + SEO fields), blog translator, and a customer-facing store assistant that answers from the product catalogue. FastAPI + OpenAI Agents SDK, switchable between OpenAI, DeepSeek and Gemini; long generations run as background jobs; nothing publishes without human review.
 - **Upwork Proposal Agent** (private) — agent that generates personalised Upwork proposals.
-- **OBS Agentic AI Assistant** (private) — full-stack agentic assistant with agentic search, frontend and backend services.
 - **Agentic AI Tutor** (private) — AI tutoring platform with adaptive learning. TypeScript, Next.js.
 
 ### RAG and generative AI
@@ -118,15 +117,18 @@ Heart Disease Classification (Streamlit, scikit-learn), English Learning Bot (Ge
 
 ### Web and business applications
 - **OptifyServe SaaS** (private) — UAE-based business optimization and automation platform. Next.js, TypeScript, FastAPI.
-- **POS System** (private) — point-of-sale system for a retail computer shop.
 - **Warehouse Ready Stock** (private) — warehouse stock tracking.
-- **Inventory Management** (public) — https://github.com/MSMuneerIqbal/7star-shop-inventory
-- **Kashibaba.pk** (public) — e-commerce marketplace, Next.js and TypeScript. https://github.com/MSMuneerIqbal/kashibaba.pk
+- **7Star Battery Shop POS** (public) — PySide6 desktop POS for a laptop battery shop: stock with Excel import, Khata (credit) ledger, PDF bills and daily sales audit reports. https://github.com/MSMuneerIqbal/7star-shop-inventory
+- **Retail Shop POS & Inventory** (public) — offline Flask + PyWebView desktop POS for a general store, with thermal receipts, returns and a sales and profit dashboard. https://github.com/MSMuneerIqbal/Inventry-management-Bookshop
+- **Kashibaba.pk** (public, live at https://kashibaba.pk) — multivendor e-commerce store: Next.js 15, TypeScript, PostgreSQL with Prisma, NextAuth. https://github.com/MSMuneerIqbal/kashibaba.pk
 - **This portfolio** (public) — Next.js, TypeScript, Tailwind. https://github.com/MSMuneerIqbal/portfolio-web
 - **ApnaBot** (private) — multi-language chatbot built with Hugging Face and Gemini.
 
-### Learning resources he published (public)
-Learn Generative AI, Learn Modern Python, Learn Cloud-Native Python, Learn Fine-Tuning LLMs, Low-Code Agentic AI (n8n and MCP), CrewAI Learnings, FastAPI Learnings, a Claude master guide.
+### Courses and guides (public)
+Courses he worked through during PIAIC (forks of the Panaverse/Panaversity course repos, not written by him): Learn Generative AI, Learn Modern Python, Learn Cloud-Native Python, Learn Fine-Tuning LLMs, Low-Code Agentic AI (n8n and MCP).
+His own notes and guides: CrewAI Learnings, FastAPI Learnings, a Claude Code master guide, a CLI agents installation guide.
+
+Every project has a detail page on the portfolio at https://muneer-iqbal.vercel.app/projects/<slug>.
 
 ### Counts shown on the portfolio site
 58 public repositories and 31 private projects. Do not give any other project count.

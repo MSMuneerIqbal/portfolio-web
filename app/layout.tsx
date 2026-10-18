@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://muneer-iqbal.vercel.app'),
   title: 'Muneer Iqbal - AI-Driven Agentic AI Engineer',
   description: 'Agentic AI Engineer specializing in autonomous multi-agent systems, Generative AI, RAG pipelines, and Full-Stack Development. 89+ projects showcasing LLMs, CrewAI, and enterprise AI solutions.',
   keywords: 'Agentic AI Engineer, AI Developer, Generative AI, Multi-Agent Systems, LLMs, RAG, Full-Stack Developer, Python, TypeScript, Next.js, LangChain, CrewAI',
