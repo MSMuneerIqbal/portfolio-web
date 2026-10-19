@@ -116,7 +116,7 @@ Public repositories can be linked. Private projects are described only at the le
 Heart Disease Classification (Streamlit, scikit-learn), English Learning Bot (GenAI Hackathon project), Image Restoration (autoencoders, TensorFlow), Sentiment Analysis on Daraz product reviews, Hand-Tracked Snake Game (OpenCV), Multilingual Translator, Donation Prediction Bot, CSV/XLSX Data Processor, and an ML/DL/NLP collection. All under https://github.com/MSMuneerIqbal
 
 ### Web and business applications
-- **OptifyServe SaaS** (private) — UAE-based business optimization and automation platform. Next.js, TypeScript, FastAPI.
+- **OptifyServe Service Management ERP** (live at https://optifyserve.com; code is private) — ERP for UAE service companies: CRM, sales and VAT invoicing, jobs with GPS technician dispatch, multi-warehouse inventory, purchasing, accounting with UAE VAT returns, and HR and payroll with EOSB. Next.js, TypeScript, FastAPI, PostgreSQL.
 - **Warehouse Ready Stock** (private) — warehouse stock tracking.
 - **7Star Battery Shop POS** (public) — PySide6 desktop POS for a laptop battery shop: stock with Excel import, Khata (credit) ledger, PDF bills and daily sales audit reports. https://github.com/MSMuneerIqbal/7star-shop-inventory
 - **Retail Shop POS & Inventory** (public) — offline Flask + PyWebView desktop POS for a general store, with thermal receipts, returns and a sales and profit dashboard. https://github.com/MSMuneerIqbal/Inventry-management-Bookshop
