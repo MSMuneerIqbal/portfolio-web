@@ -48,6 +48,8 @@ export type Project = {
   benefits: string[];
   stack: { label: string; items: string[] }[];
   screenshots?: Screenshot[];
+  // Shown as a "Try it live" box on the project page.
+  tryLive?: string;
   note?: string;
 };
 
@@ -113,13 +115,13 @@ export const projects: Project[] = [
     title: "7Star E-commerce Store & AI Agents",
     category: "agents",
     summary:
-      "The complete online store we built for a laptop battery business. An automated admin panel where AI agents write product descriptions, SEO tags and blog posts for review, plus an AI shopping assistant for customers",
+      "The complete online store I built for a laptop battery business, live at 7starbattery.pk. An automated admin panel where AI agents write product descriptions, SEO tags and blog posts for review, plus a public AI shopping assistant anyone can try",
     tags: ["Next.js", "FastAPI", "OpenAI Agents SDK", "PostgreSQL", "Redis"],
     visibility: "private",
     featured: true,
     cover: "/projects/7star-ecommerce-ai-store/cover.webp",
     live: "https://7starbattery.pk",
-    role: "Senior Software Engineer at 7Star, built with the team",
+    role: "Designed and built by me as Senior Software Engineer at 7Star",
     problem:
       "7Star sells laptop batteries, and every laptop model needs a specific battery. Most customers don't know their battery's part number, so they called or messaged the shop to ask what fits. Behind the scenes, writing product descriptions, SEO tags and blog posts for hundreds of batteries took a lot of staff time.",
     approach: [
@@ -128,7 +130,7 @@ export const projects: Project[] = [
       "Added AI agents to the admin panel with the OpenAI Agents SDK: a product description writer, an SEO writer checked by an SEO reviewer agent, a blog writer that adds FAQs and SEO fields, and a blog translator.",
       "Made the AI provider switchable between OpenAI, DeepSeek and Gemini, and ran long generations as background jobs so the admin panel stays fast.",
       "Kept people in control: the AI saves drafts for review and nothing is published without approval.",
-      "Added a customer-facing AI assistant that answers from the product catalogue and suggests batteries that fit.",
+      "Added a public AI shopping assistant on every page that answers from the product catalogue and suggests batteries that fit, with prices.",
     ],
     features: [
       "Search by laptop model or battery part number",
@@ -156,7 +158,9 @@ export const projects: Project[] = [
       { src: "/projects/7star-ecommerce-ai-store/product.webp", alt: "Product page for a Dell Latitude battery", caption: "A product page. Descriptions and SEO fields are drafted by AI agents and approved by the team." },
       { src: "/projects/7star-ecommerce-ai-store/blog.webp", alt: "7Star blog page", caption: "The blog. Posts are drafted by the blog writer agent, with FAQs and SEO fields, then reviewed." },
     ],
-    note: "The store is live. The source code is private.",
+    tryLive:
+      "The store and its AI shopping assistant are live for everyone. Open 7starbattery.pk, click \"Ask AI\" at the bottom right and type your laptop model, for example \"Dell Latitude 5420\".",
+    note: "The source code is private.",
   },
   {
     slug: "weather-agent",
@@ -604,12 +608,14 @@ export const projects: Project[] = [
     slug: "kashibaba",
     title: "Kashibaba.pk",
     category: "web",
-    summary: "A full-stack multivendor e-commerce store for Pakistan with a customer storefront, admin dashboard and REST API in one Next.js codebase",
+    summary: "A full-stack multivendor e-commerce store I built for Pakistan, live at kashibaba.pk, with a customer storefront, admin dashboard and REST API in one Next.js codebase",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "NextAuth"],
     visibility: "public",
     featured: true,
     repo: `${GH}/kashibaba.pk`,
     live: "https://kashibaba.pk",
+    role: "Designed and built by me",
+    tryLive: "The store is live. Open kashibaba.pk to browse products, add them to the cart, check out and track an order.",
     problem: "Small sellers in Pakistan need an online store that is fast, secure and easy to manage, without paying for an expensive platform.",
     approach: [
       "Built the storefront, admin dashboard and REST API in one Next.js 15 (App Router) codebase, fully in TypeScript.",

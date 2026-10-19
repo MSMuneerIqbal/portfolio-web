@@ -164,6 +164,27 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
         <div className="grid lg:grid-cols-3 gap-10">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-12">
+            {project.tryLive && project.live && (
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 rounded-xl border border-emerald-500/25 bg-emerald-500/5 p-5">
+                <div className="flex gap-3 flex-1">
+                  <Globe size={20} className="flex-shrink-0 mt-0.5 text-emerald-400" />
+                  <div>
+                    <p className="font-semibold text-emerald-300 mb-1">Try it live</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{project.tryLive}</p>
+                  </div>
+                </div>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/25 text-sm font-medium transition-all whitespace-nowrap"
+                >
+                  Open {project.live.replace(/^https?:\/\//, "")}
+                  <ExternalLink size={13} />
+                </a>
+              </div>
+            )}
+
             {project.note && (
               <div className="flex gap-3 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-200/90">
                 <Info size={18} className="flex-shrink-0 mt-0.5 text-amber-400" />
